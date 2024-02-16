@@ -1,0 +1,71 @@
+:root {
+  /* Color styles */
+
+  /* Primary */
+  --primary: #b4f034;
+  --primary-2: #d8f792;
+  --primary-3: #e5fab8;
+  --primary-4: #effac1;
+  --primary-5: #f6fde7;
+
+  /* Secondary */
+  --secondary: #7a76f4;
+  --secondary-2: #bab8f9;
+  --secondary-3: #d1d0fb;
+  --secondary-4: #e8e7fd;
+  --secondary-dark: #080647;
+
+  /* Accent */
+  --accent: #f147ea;
+  --accent-darker: #a60ca1;
+  --accent-darkest: #770973;
+
+  /* Text, background, etc */
+
+  --text: #0f1301;
+
+  --background: #fffce9;
+  --background-darker: #f3f0dd;
+
+  --white: #ffffff;
+  --silver: #daddd8;
+  --yellow: #ffdd00;
+
+  --hero-page: #e6d6b5;
+
+  /* Text styles */
+
+  /* Font Families */
+  --font-noto-sans: "Noto Sans", sans-serif;
+  --font-play: "Play", sans-serif;
+  --font-revalia: "Revalia", sans-serif;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  .noto-sans {
+    font-family: var(--font-noto-sans);
+    font-weight: var(--font-weight);
+  }
+
+  .noto-sans-bold {
+    font-family: var(--font-noto-sans);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .play {
+    font-family: var(--font-play);
+    font-weight: var(--font-weight-regular);
+  }
+
+  .play-bold {
+    font-family: var(--font-play);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .revalia-regular {
+    font-family: var(--font-revalia);
+    font-weight: var(--font-weight-regular);
+  }
+}
