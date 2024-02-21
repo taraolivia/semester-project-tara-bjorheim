@@ -58,7 +58,9 @@ a:focus {
 [aria-current="page"] a:focus {
   font-weight: bold;
   text-decoration: none;
-  cursor:default;
+  cursor: default;
 }
+
+
 
 

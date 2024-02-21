@@ -2,26 +2,6 @@
 @import url(reset.css);
 @import url(variables.css);
 
-
-
-@keyframes rotation {
-  from {
-    --gradient-angle: 0deg;
-  }
-  to {
-    --gradient-angle: 360deg;
-  }
-}
-
-@keyframes testAnimation {
-  0% {
-    background-color: red;
-  }
-  100% {
-    background-color: blue;
-  }
-}
-
 body {
   font-family: var(--font-primary);
   font-size: var(--font-size-base);
@@ -33,7 +13,7 @@ body {
   background-color: var(--hero-page);
 }
 
-nav {
+.header-nav {
   background-color: var(--primary);
   height: 7rem;
 }
@@ -52,6 +32,8 @@ nav {
   background-color: var(--secondary-2);
   width: 17.5rem;
 }
+
+
 
 #logo {
   position: relative;
@@ -132,28 +114,25 @@ nav {
   max-width: 500px;
 }
 
-
 .exhibition-gallery-element-name {
   background-color: var(--secondary-dark);
   color: var(--white);
-  padding: 0.5em;
+  padding: 0.7em 0em;
   border: 5px solid transparent;
 }
 
-
-
 .exhibition-gallery-element-name:hover {
-  transition: all 2.5s ease-in-out;
+  transition: all 1s ease-in-out;
   color: black;
 }
 
 .evo-gradient {
-  border-image: linear-gradient(var(--text), var(--yellow)) 1 stretch;
+  border-image: linear-gradient(var(--white), var(--yellow)) 1 stretch;
 }
 
 .evo-glow:hover {
   box-shadow: 0 0 50px var(--yellow);
-  background-image: linear-gradient(var(--text), var(--yellow));
+  background-image: linear-gradient(var(--white), var(--yellow));
 }
 
 .bio-gradient {
@@ -166,13 +145,12 @@ nav {
 }
 
 .ai-gradient {
-  border-image: linear-gradient(var(--secondary-dark), var(--accent-darker)) 1 stretch;
+  border-image: linear-gradient(var(--accent), var(--accent-darkest)) 1 stretch;
 }
 
 .ai-glow:hover {
   box-shadow: 0 0 50px var(--accent);
-  background-image: linear-gradient(var(--secondary-dark), var(--accent-darker));
-  color: var(--white);
+  background-image: linear-gradient(var(--accent), var(--accent-darkest));
 }
 
 .eco-gradient {
@@ -197,9 +175,47 @@ nav {
   padding: 1em;
 }
 
+
+.index-practical-info-list {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2fr;
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+ul {
+  padding: 0%;
+}
+
+
+.index-practical-info-list li{
+  list-style-type: none;
+  background-image: url(/Assets/Photos/bullet-points/Planet.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  padding-left: 7rem;
+  list-style-position: inside;
+  line-height: 7rem;
+}
+
+.index-practical-info-list-part {
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+  align-content: center;
+}
+
+
+
 .button {
-  width: 45rem;
-  height: 6.3rem;
+  min-height: 7rem;
+  max-width: fit-content;
+  min-width: 50rem;
+  padding: 1rem 5rem;
+  text-wrap: wrap;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -208,10 +224,27 @@ nav {
   font-size: var(--font-size-xl);
   font-family: var(--font-play);
   margin: auto;
+  text-transform: uppercase;
 }
 
 .button:hover {
   cursor: pointer;
+  box-shadow: 0 0 20px var(--white);
+}
+
+.cosmo-glow:hover {
+  background-image: linear-gradient(var(--accent), var(--yellow));
+}
+
+
+
+.opening-hours {
+  display: flex;
+}
+
+.opening-hours-item {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Utilities */
@@ -317,6 +350,24 @@ nav {
   }
 }
 
+@media (max-width: 650px) {
+
+  .index-practical-info-list {
+    grid-template-columns: 1fr;
+  }
+
+  .index-practical-info-list li{
+    list-style-type: none;
+    background-image: url(/Assets/Photos/bullet-points/Planet.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    list-style-position: inside;
+    line-height: 4em;
+    padding-left: 10rem;
+  }
+  
+}
+
 /* Colours */
 /* Primary Colors */
 .bg-primary {
@@ -386,4 +437,12 @@ nav {
 }
 .bg-text {
   background-color: var(--text);
+}
+
+.clr-white {
+  color: var(--white);
+}
+
+.center {
+  margin: auto;
 }
