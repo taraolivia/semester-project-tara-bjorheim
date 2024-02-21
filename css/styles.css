@@ -2,31 +2,388 @@
 @import url(reset.css);
 @import url(variables.css);
 
+
+
+@keyframes rotation {
+  from {
+    --gradient-angle: 0deg;
+  }
+  to {
+    --gradient-angle: 360deg;
+  }
+}
+
+@keyframes testAnimation {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  text-align: left;
+}
+
+.index {
+  background-color: var(--hero-page);
+}
+
 nav {
-    background-color: var(--primary);
-    height: 70px;
+  background-color: var(--primary);
+  height: 7rem;
 }
 
 .navbar__content {
-    display: flex;
-    max-width: 80%;
-    margin: auto;
-    gap: 15px;
-    height: 70px;
-    line-height: 70px;
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+  gap: 1.5rem;
+  height: 7rem;
+  line-height: 7rem;
+  justify-content: center;
 }
 
-.navbar__content-background {
-    background-color: var(--secondary-2);
-    width: 175px;
+.navbar__content-item {
+  background-color: var(--secondary-2);
+  width: 17.5rem;
+}
+
+#logo {
+  position: relative;
+  margin-top: 0.5em;
+}
+
+#hero-img {
+  margin: auto;
+}
+
+.content__section {
+  width: 80%;
+  margin: auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  max-width: 1800px;
+}
+
+.index-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.index-gallery-element {
+  display: flex;
+}
+
+.index-news {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.index-news-element {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin-top: 5rem;
+}
+
+.index-news-element-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.index-news-element-text h3 {
+  padding: 1rem;
+}
+
+.index-news-element-text p {
+  padding: 2.5rem;
+  height: 100%;
+}
+
+.index-news-element-img {
+  flex: 1;
+  width: 100%;
+  height: auto;
+}
+
+.exhibition-gallery-wrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 4em;
+  justify-content: center;
+  padding: 3em 0;
+  text-align: center;
+}
+
+.exhibition-gallery-element {
+  font-family: var(--font-play);
+  font-size: var(--font-size-xxl);
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+
+.exhibition-gallery-element-name {
+  background-color: var(--secondary-dark);
+  color: var(--white);
+  padding: 0.5em;
+  border: 5px solid transparent;
+}
+
+
+
+.exhibition-gallery-element-name:hover {
+  transition: all 2.5s ease-in-out;
+  color: black;
+}
+
+.evo-gradient {
+  border-image: linear-gradient(var(--text), var(--yellow)) 1 stretch;
+}
+
+.evo-glow:hover {
+  box-shadow: 0 0 50px var(--yellow);
+  background-image: linear-gradient(var(--text), var(--yellow));
+}
+
+.bio-gradient {
+  border-image: linear-gradient(var(--secondary), var(--primary)) 1 stretch;
+}
+
+.bio-glow:hover {
+  box-shadow: 0 0 50px var(--primary);
+  background-image: linear-gradient(var(--secondary), var(--primary));
+}
+
+.ai-gradient {
+  border-image: linear-gradient(var(--secondary-dark), var(--accent-darker)) 1 stretch;
+}
+
+.ai-glow:hover {
+  box-shadow: 0 0 50px var(--accent);
+  background-image: linear-gradient(var(--secondary-dark), var(--accent-darker));
+  color: var(--white);
+}
+
+.eco-gradient {
+  border-image: linear-gradient(var(--yellow), var(--primary)) 1 stretch;
+}
+
+.eco-glow:hover {
+  box-shadow: 0 0 50px var(--primary);
+  background-image: linear-gradient(var(--yellow), var(--primary));
+}
+
+.cosmo-gradient {
+  border-image: linear-gradient(var(--accent), var(--yellow)) 1 stretch;
+}
+
+.cosmo-glow:hover {
+  box-shadow: 0 0 50px var(--accent);
+  background-image: linear-gradient(var(--accent), var(--yellow));
+}
+
+.exhibition-gallery-element p {
+  padding: 1em;
+}
+
+.button {
+  width: 45rem;
+  height: 6.3rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-play);
+  margin: auto;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+/* Utilities */
+/* Font Family */
+.ff-noto-sans {
+  font-family: var(--font-noto-sans);
+}
+.ff-play {
+  font-family: var(--font-play);
+  font-weight: var(--font-weight-normal);
+}
+.ff-revalia {
+  font-family: var(--font-revalia);
+}
+
+/* Font Weight */
+.fw-normal {
+  font-weight: var(--font-weight-normal);
+}
+.fw-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Font Size */
+.fs-xs {
+  font-size: var(--font-size-xs);
+}
+.fs-s {
+  font-size: var(--font-size-s);
+}
+.fs-base {
+  font-size: var(--font-size-base);
+}
+.fs-l {
+  font-size: var(--font-size-l);
+}
+.fs-xl {
+  font-size: var(--font-size-xl);
+}
+.fs-xxl {
+  font-size: var(--font-size-xxl);
+}
+
+/* Text-alignment */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.row-reverse {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+/* Responsive classes for small screens and up */
+/* Responsive classes for tablet-ish screens */
+@media (max-width: 1023px) {
+  .text-left-m {
+    text-align: left;
+  }
+  .text-center-m {
     text-align: center;
+  }
+  .text-right-m {
+    text-align: right;
+  }
+
+  .index-news-element {
+    flex-direction: column; /* Switch all to column layout */
+  }
+
+  /* Ensure images and text in reversed items still follow the column layout */
+  .index-news-element.row-reverse {
+    flex-direction: column;
+  }
+
+  .content__section {
+    max-width: 90%;
+  }
 }
 
-.navbar__content-active {
-font-weight: bold;
+/* Responsive classes for phone sizes */
+@media (max-width: 767px) {
+  .text-left-s {
+    text-align: left;
+  }
+  .text-center-s {
+    text-align: center;
+  }
+  .text-right-s {
+    text-align: right;
+  }
+
+  .content__section {
+    max-width: 100%;
+  }
 }
 
-.background__color-index,
-.navbar__content-active-index {
-    background-color: var(--hero-page);
+/* Colours */
+/* Primary Colors */
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-primary-2 {
+  background-color: var(--primary-2);
+}
+.bg-primary-3 {
+  background-color: var(--primary-3);
+}
+.bg-primary-4 {
+  background-color: var(--primary-4);
+}
+.bg-primary-5 {
+  background-color: var(--primary-5);
+}
+
+/* Secondary Colors */
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.bg-secondary-2 {
+  background-color: var(--secondary-2);
+}
+.bg-secondary-3 {
+  background-color: var(--secondary-3);
+}
+.bg-secondary-4 {
+  background-color: var(--secondary-4);
+}
+.bg-secondary-dark {
+  background-color: var(--secondary-dark);
+}
+
+/* Accent Colors */
+.bg-accent {
+  background-color: var(--accent);
+}
+.bg-accent-darker {
+  background-color: var(--accent-darker);
+}
+.bg-accent-darkest {
+  background-color: var(--accent-darkest);
+}
+
+/* Background */
+.bg-background {
+  background-color: var(--background);
+}
+.bg-background-darker {
+  background-color: var(--background-darker);
+}
+.bg-hero {
+  background-color: var(--hero-page);
+}
+
+/* Additional Colors */
+.bg-white {
+  background-color: var(--white);
+}
+.bg-silver {
+  background-color: var(--silver);
+}
+.bg-yellow {
+  background-color: var(--yellow);
+}
+.bg-text {
+  background-color: var(--text);
 }

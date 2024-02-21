@@ -1,62 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Meta descripton for this page" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" type="image/x-icon" href="/Assets/Photos/Fauget 1.png" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Play:wght@400;700&family=Revalia&display=swap");
-    </style>
-    <title>Home | Galaxy Garden</title>
-  </head>
-  <body>
-    <nav>
-      <div class="navbar__content">
-        <a href="index.html"
-          ><img
-            src="Assets/Photos/Fauget 1.png"
-            alt="Galaxy Garden Community Museum logo. A test tube with yellow liquid surrounded by stars and a planet-ring"
-        /></a>
-        <a href="index.html"
-          ><img
-            src="Assets/Photos/Galaxy Garden Community Museum.png"
-            alt="Galaxy Garden Community Museum"
-        /></a>
 
-        <div
-          class="navbar__content-background navbar__content-active navbar__content-active-index"
-        >
-          <a href="index.html">HOME</a>
-        </div>
-        <div class="navbar__content-background">
-          <a href="exhibitions.html">EXHIBITIONS</a>
-        </div>
-        <div class="navbar__content-background">
-          <a href="get-involved.html">GET INVOLVED</a>
-        </div>
-        <div class="navbar__content-background">
-          <a href="practical-info.html">PRACTICAL INFO</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meta descripton for this page" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="/Assets/Photos/Fauget 1.png" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Play:wght@400;700&family=Revalia&display=swap");
+  </style>
+  <title>Home | Galaxy Garden</title>
+</head>
+
+<body class="index">
+  <nav>
+    <div class="navbar__content ff-play fs-l text-center">
+      <a id="logo" href="index.html"><img src="Assets/Photos/Fauget 1.png"
+          alt="Galaxy Garden Community Museum logo. A test tube with yellow liquid surrounded by stars and a planet-ring" /></a>
+      <a id="logo" href="index.html"><img src="Assets/Photos/Galaxy Garden Community Museum.png"
+          alt="Galaxy Garden Community Museum" /></a>
+
+      <div class="navbar__content-item bg-hero" aria-current="page">
+        <a href="/">HOME</a>
       </div>
-    </nav>
-
-    <section class="background__color-index">
-      <div class="header__index">
-        <img
-          src="Assets/Photos/lab-512503_1920 1.png"
-          alt="An illustration showing diffferent science equipment in an old art style"
-        />
+      <div class="navbar__content-item">
+        <a href="exhibitions.html">EXHIBITIONS</a>
       </div>
-      <header>
-        <h1>
-          Welcome to Galaxy Garden Community Museum. Let’s explore together!
-        </h1>
-      </header>
+      <div class="navbar__content-item">
+        <a href="get-involved.html">GET INVOLVED</a>
+      </div>
+      <div class="navbar__content-item">
+        <a href="practical-info.html">PRACTICAL INFO</a>
+      </div>
+    </div>
+  </nav>
 
-      <main></main>
-    </section>
-    <footer></footer>
-  </body>
+
+
+  <header>
+    <div>
+      <img id="hero-img" src="Assets/Photos/lab-512503_1920 1.png"
+        alt="An illustration showing diffferent science equipment in an old art style" />
+    </div>
+    <h1 class="ff-revalia fs-xxl text-center">
+      Welcome to Galaxy Garden Community Museum.
+      <br>
+      Let’s explore together!
+    </h1>
+  </header>
+
+  <main>
+
+
+    <section class="index-gallery fs-l">
+      <section class="content__section">
+        <div class="index-gallery-element">
+          <p>
+            Come join us at the Community Science Museum where we’re committed to making science accessible to all.
+          </p>
+          <img src="Assets/Photos/index/scientific-2040795_1280 1.png" alt="">
+        </div>
+
+        <div class="index-gallery-element">
+          <img src="Assets/Photos/index/celso-405219 1.png" alt="">
+          <p>
+            Over the course of human history, science has developed from our early understanding of fire, wind, water,
+            and earth to exploring everything from galaxies far away to the very building blocks of life itself.
+          </p>
+        </div>
+        <div class="index-gallery-element">
+          <p>
+            The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and
+            perhaps even ignite a lifelong passion to continue the exploration of the world around us.
+          </p>
+          <img src="Assets/Photos/index/billetto-editorial-334686 1.png" alt="">
+        </div>
+      </section>
+
+      <section class="exhibition-gallery bg-primary-3">
+        <section class="content__section">
+
+
+
+          <h2 class="ff-play fs-xxl text-center">
+            These are our exciting exhibitions for you to come and see!
+          </h2>
+
+          <div class="exhibition-gallery-wrapper">
+
+            <div class="exhibition-gallery-element ff-noto-sans fs-l">
+              <p class="bg-background-darker text-left">
+                We believe science should not be confined to textbooks, but brought to life through exhibits. This is
+                why
+                we have over 1000 different exhibits on the many varied subjects of science to explore.
+                Many of these exhibits are designed for you to interact with and play around to see science come to life
+                (apart from the dinosaur exhibits – they only come to life at night when everyone’s gone home). Hover over the names for a cool effect!
+              </p>
+            </div>
+
+            <div class="exhibition-gallery-element">
+              <img src="Assets/Photos/index/exhibition-preview/evo.png" alt="">
+              <div class="exhibition-gallery-element-name evo-gradient evo-glow">
+                EVOLUTION
+              </div>
+            </div>
+
+            <div class="exhibition-gallery-element">
+              <img src="Assets/Photos/index/exhibition-preview/bio.png" alt="">
+              <div class="exhibition-gallery-element-name bio-gradient bio-glow">
+                BIOLOGY AND MEDICINE
+              </div>
+            </div>
+
+            <div class="exhibition-gallery-element">
+              <img src="Assets/Photos/index/exhibition-preview/ai.png" alt="">
+              <div class="exhibition-gallery-element-name ai-gradient ai-glow">
+                ROBOTICS AND AI
+              </div>
+            </div>
+
+            <div class="exhibition-gallery-element">
+              <img src="Assets/Photos/index/exhibition-preview/eco.png" alt="">
+              <div class="exhibition-gallery-element-name eco-gradient eco-glow">
+                ECOLOGY
+              </div>
+            </div>
+
+            <div class="exhibition-gallery-element">
+              <img src="Assets/Photos/index/exhibition-preview/cosmo.png" alt="">
+              <div class="exhibition-gallery-element-name cosmo-gradient cosmo-glow">
+                COSMOLOGY
+              </div>
+            </div>
+
+          </div>
+
+          <div class="button bg-primary">
+            <a href="exhibitions.html">
+              GO TO EXHIBITIONS
+            </a>
+          </div>
+        </section>
+      </section>
+
+
+
+      <section class="index-news text-center">
+        <section class="content__section">
+          <h2 class="ff-play fs-xxl text-center">
+            Upcoming news and events at the museum
+          </h2>
+
+          <div class="index-news-element row-reverse">
+            <div class="index-news-element-text">
+              <h3 class="bg-secondary-2 fs-xl">
+                Visiting Professor of Aeronautics
+              </h3>
+              <p class="bg-secondary-3 fs-l">
+                It is our pleasure to announce that Prof Sheila Widnall from the Massachusetts Institute of Technology
+                will be delivering 3 lectures on the development of aeronautics and where the future lies in this
+                exciting ‘space’.
+              </p>
+            </div>
+            <img class="index-news-element-img" src="Assets/Photos/index/news/news-space.png" alt="">
+          </div>
+
+          <div class="index-news-element">
+            <div class="index-news-element-text">
+              <h3 class="bg-secondary-2 fs-xl">
+                Night in the Museum
+              </h3>
+              <p class="bg-secondary-3 fs-l">
+                Get your family together for an exciting night in the museum as you sleep over beside dinosaurs and
+                science displays. Bring your own sleeping bag and get ready to rough it as we go exploring the wonders
+                of science.
+              </p>
+            </div>
+            <img class="index-news-element-img" src="Assets/Photos/index/news/news-dino.png" alt="">
+          </div>
+
+          <div class="index-news-element row-reverse">
+            <div class="index-news-element-text">
+              <h3 class="bg-secondary-2 fs-xl">
+                Energetica Exhibition on Loan </h3>
+              <p class="bg-secondary-3 fs-l">
+                On loan from the NEMO Science Museum in Amsterdam, the Energetica exhibition is coming to the Community
+                Science Museum. It’s a series of installations that allow visitors to experience the power of the
+                elements as we harness them. From solar energy powering lighting, to ‘Wind Island’ that shows how
+                turbines are able to use and control wind to create power.
+              </p>
+            </div>
+            <img class="index-news-element-img" src="Assets/Photos/index/news/news-lightning.png" alt="">
+          </div>
+
+
+
+
+        </section>
+      </section>
+
+  </main>
+
+  <footer></footer>
+</body>
+
 </html>
