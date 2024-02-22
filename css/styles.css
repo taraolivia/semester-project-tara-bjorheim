@@ -52,6 +52,14 @@ body {
   max-width: 1800px;
 }
 
+.content__section-90 {
+  width: 90%;
+  margin: auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  max-width: 1800px;
+}
+
 .index-gallery {
   display: flex;
   flex-direction: column;
@@ -238,7 +246,8 @@ ul {
 }
 
 footer {
-
+  display: flex;
+  flex-direction: column;
 }
 
 #footer-logo {
@@ -257,44 +266,173 @@ footer {
 
 .footer-hours-and-map {
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 20em;
-  gap: -50em;
+  flex-wrap: wrap;
+justify-content: center;
 }
 
 
+
+
+
+.footer-hours-and-map {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows items to wrap if needed */
+}
+
 .opening-hours {
   display: flex;
+  flex-direction: row;
+  padding: 3em; /* Consistent padding, adjust as needed */
+  min-width: 300px; /* Minimum width before wrapping */
+  flex: 1; /* Allows flexing in relation to the map */
+  margin-right: -20%;
+  gap: 4em;
   padding-top: 3em;
   padding-bottom: 3em;
   padding-left: 5em;
-  padding-right: 30em;
-  position: absolute;
-  gap: 4em;
+  padding-right: 25em;
 }
 
 .opening-hours-item {
   display: flex;
   flex-direction: column;
   gap: 1em;
-
 }
 
 .footer-map {
   display: flex;
   flex-direction: column;
+  flex: 1; /* Allows flexing in relation to the opening hours */
+}
+
+.footer-map-container {
   position: relative;
-  padding-left: 40em;
-justify-content: center;
-align-self: center;
+  width: 100%; /* Container width is 100% of the footer-map */
+  padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
+  height: 0; /* Collapse the container's height */
 }
 
-iframe {
-  padding-top: 1em;
+.footer-map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Height controlled by padding-top of the container */
 }
 
 
 
+
+@media (max-width: 768px) {
+  .footer-hours-and-map {
+    flex-direction: column;
+  }
+
+  .opening-hours,
+  .footer-map-container {
+    padding: 1em;
+    width: auto; /* Allow them to naturally fill the container */
+    flex: none; /* Remove flex grow/shrink/basis */
+  }
+}
+
+
+
+
+
+
+/* Adjust margins for medium screens */
+@media (max-width: 1800px) {
+  .opening-hours {
+    margin-right: -25%; /* Slightly smaller negative margin */
+  }
+}
+
+
+
+/* Further adjustments for smaller medium screens */
+@media (max-width: 1600px) {
+
+  .opening-hours {
+    display: flex;
+    padding-top: 3em;
+    margin-right: -24em;
+  }
+  
+  .opening-hours-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  .footer-map-container {
+    position: relative;
+    width: 80%; /* Container width is 100% of the footer-map */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
+    height: 0; /* Collapse the container's height */
+    margin-left: 10%;
+
+  }
+
+}
+
+
+/* Further adjustments for smaller medium screens */
+@media (max-width: 1200px) {
+
+  .opening-hours {
+    display: flex;
+    padding-top: 3em;
+    margin-right: -24em;
+  }
+  
+  .opening-hours-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  .footer-map-container {
+    position: relative;
+    width: 60%; /* Container width is 100% of the footer-map */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
+    height: 0; /* Collapse the container's height */
+    margin-left: 20%;
+  }
+
+}
+
+/* Further adjustments for smaller medium screens */
+@media (max-width: 1100px) {
+
+  .footer-hours-and-map {
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  }
+ 
+  .opening-hours {
+    display: flex;
+    padding-top: 3em;
+    justify-content: center;
+  }
+  
+  .opening-hours-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  .footer-map-container {
+    width: 100%; /* Container width is 100% of the footer-map */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
+    height: 0; /* Collapse the container's height */
+
+  }
+
+}
 
 
 /* Utilities */
@@ -504,6 +642,16 @@ iframe {
   margin: auto;
 }
 
+.padding-top-bottom-1em {
+  padding: 1em 0;
+}
+
 .padding-top-bottom-2em {
   padding: 2em 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
 }
