@@ -182,7 +182,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 2fr;
   max-width: 600px;
-  margin: 2em auto;
+  margin: 3em auto;
 }
 
 ul {
@@ -223,8 +223,9 @@ ul {
   text-align: center;
   font-size: var(--font-size-xl);
   font-family: var(--font-play);
-  margin: auto;
+  margin: 2em auto 1em auto;
   text-transform: uppercase;
+  
 }
 
 .button:hover {
@@ -236,16 +237,65 @@ ul {
   background-image: linear-gradient(var(--accent), var(--yellow));
 }
 
+footer {
+
+}
+
+#footer-logo {
+  position: absolute;
+  margin: -5em auto 5em auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3em 0;
+}
+
+.footer-hours-and-map {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20em;
+  gap: -50em;
+}
 
 
 .opening-hours {
   display: flex;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  padding-left: 5em;
+  padding-right: 30em;
+  position: absolute;
+  gap: 4em;
 }
 
 .opening-hours-item {
   display: flex;
   flex-direction: column;
+  gap: 1em;
+
 }
+
+.footer-map {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 40em;
+justify-content: center;
+align-self: center;
+}
+
+iframe {
+  padding-top: 1em;
+}
+
+
+
+
 
 /* Utilities */
 /* Font Family */
@@ -330,6 +380,13 @@ ul {
 
   .content__section {
     max-width: 90%;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0;
+    gap: 1em;
   }
 }
 
@@ -445,4 +502,8 @@ ul {
 
 .center {
   margin: auto;
+}
+
+.padding-top-bottom-2em {
+  padding: 2em 0;
 }
