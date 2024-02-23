@@ -11,7 +11,13 @@ body {
 
 
 header {
-  padding-top: 5rem;
+  padding-top: 4em;
+  padding-bottom: 3em;
+}
+
+.content__section-header {
+  max-width: 70%;
+  margin: auto;
 }
 
 .header-nav {
@@ -23,9 +29,9 @@ header {
 
 .navbar__content {
   display: flex;
-  max-width: 80%;
+  max-width: 90%;
   margin: auto;
-  gap: 3rem;
+  gap: 2em;
   height: 7rem;
   line-height: 7rem;
   justify-content: center;
@@ -33,12 +39,14 @@ header {
 
 .navbar__content-item {
   background-color: var(--secondary-2);
-  width: 17.5rem;
+  width: 11em;
+  min-height: fit-content;
 }
 
 #logo {
   position: relative;
   margin-top: 0.5em;
+  margin-left: -1em;
 }
 
 #hero-img {
@@ -396,6 +404,60 @@ footer {
   color: var(--secondary-dark);
 }
 
+
+.info-card-section {
+text-align: center;
+font-family: var(--font-noto-sans);
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+gap: 5em;
+align-items: stretch;
+}
+
+.info-card {
+
+    flex: 1 1 auto; /* flex-grow, flex-shrink, flex-basis */
+    min-width: 0; /* Prevents flex items from shrinking past content size */
+    width: calc(100% / 3); /* Adjust the denominator based on the number of items per row you desire */
+    max-width: 35em;
+    min-width: 28em;
+}
+
+.info-card > * {
+  padding: 1em 2em 1em 2em;
+}
+.info-card-title {
+font-size: var(--font-size-xl);
+border-radius: 0.8rem 0.8rem 0rem 0rem;
+padding: 0.8em 2em 0.8em 2em;
+}
+
+.info-card-text {
+font-size: var(--font-size-l);
+border-radius: 0rem 0rem 0.8rem 0.8rem;
+padding: 1em 2em 1em 2em;
+min-height: 20em;
+justify-content: space-evenly;
+display: flex;
+flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Utilities */
 /* Font Family */
 .ff-noto-sans {
@@ -555,7 +617,7 @@ footer {
 /* Adjust margins for medium screens */
 @media (max-width: 1800px) {
   .opening-hours {
-    margin-right: -25%; /* Slightly smaller negative margin */
+    margin-right: -10%; /* Slightly smaller negative margin */
   }
 }
 
@@ -564,7 +626,7 @@ footer {
   .opening-hours {
     display: flex;
     padding-top: 3em;
-    margin-right: -24em;
+    margin-right: -20em;
   }
 
   .opening-hours-item {
