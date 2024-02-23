@@ -9,10 +9,6 @@ body {
   text-align: left;
 }
 
-.index {
-  background-color: var(--hero-page);
-}
-
 .header-nav {
   background-color: var(--primary);
   height: 7rem;
@@ -32,8 +28,6 @@ body {
   background-color: var(--secondary-2);
   width: 17.5rem;
 }
-
-
 
 #logo {
   position: relative;
@@ -183,9 +177,7 @@ body {
   padding: 1em;
 }
 
-
 .index-practical-info-list {
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 2fr;
@@ -197,8 +189,7 @@ ul {
   padding: 0%;
 }
 
-
-.index-practical-info-list li{
+.index-practical-info-list li {
   list-style-type: none;
   background-image: url(/Assets/Photos/bullet-points/Planet.png);
   background-repeat: no-repeat;
@@ -216,8 +207,6 @@ ul {
   align-content: center;
 }
 
-
-
 .button {
   min-height: 7rem;
   max-width: fit-content;
@@ -233,7 +222,6 @@ ul {
   font-family: var(--font-play);
   margin: 2em auto 1em auto;
   text-transform: uppercase;
-  
 }
 
 .button:hover {
@@ -266,16 +254,6 @@ footer {
 
 .footer-hours-and-map {
   display: flex;
-  flex-wrap: wrap;
-justify-content: center;
-}
-
-
-
-
-
-.footer-hours-and-map {
-  display: flex;
   justify-content: center;
   flex-wrap: wrap; /* Allows items to wrap if needed */
 }
@@ -297,7 +275,7 @@ justify-content: center;
 .opening-hours-item {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  justify-content: space-between;
 }
 
 .footer-map {
@@ -321,119 +299,82 @@ justify-content: center;
   height: 100%; /* Height controlled by padding-top of the container */
 }
 
-
-
-
-@media (max-width: 768px) {
-  .footer-hours-and-map {
-    flex-direction: column;
-  }
-
-  .opening-hours,
-  .footer-map-container {
-    padding: 1em;
-    width: auto; /* Allow them to naturally fill the container */
-    flex: none; /* Remove flex grow/shrink/basis */
-  }
-}
-
-
-
-
-
-
-/* Adjust margins for medium screens */
-@media (max-width: 1800px) {
-  .opening-hours {
-    margin-right: -25%; /* Slightly smaller negative margin */
-  }
-}
-
-
-
-/* Further adjustments for smaller medium screens */
-@media (max-width: 1600px) {
-
-  .opening-hours {
-    display: flex;
-    padding-top: 3em;
-    margin-right: -24em;
-  }
-  
-  .opening-hours-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-  }
-  
-  .footer-map-container {
-    position: relative;
-    width: 80%; /* Container width is 100% of the footer-map */
-    padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
-    height: 0; /* Collapse the container's height */
-    margin-left: 10%;
-
-  }
-
-}
-
-
-/* Further adjustments for smaller medium screens */
-@media (max-width: 1200px) {
-
-  .opening-hours {
-    display: flex;
-    padding-top: 3em;
-    margin-right: -24em;
-  }
-  
-  .opening-hours-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-  }
-  
-  .footer-map-container {
-    position: relative;
-    width: 60%; /* Container width is 100% of the footer-map */
-    padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
-    height: 0; /* Collapse the container's height */
-    margin-left: 20%;
-  }
-
-}
-
-/* Further adjustments for smaller medium screens */
-@media (max-width: 1100px) {
-
-  .footer-hours-and-map {
-    display: flex;
-    flex-wrap: wrap;
-  justify-content: center;
+.exhibition-item {
+  max-width: 30em;
+  height: fit-content;
+  margin: auto;
+  font-size: var(--font-size-xl);
+  height: 100vh;
+  display: flex;
   flex-direction: column;
-  }
- 
-  .opening-hours {
-    display: flex;
-    padding-top: 3em;
-    justify-content: center;
-  }
-  
-  .opening-hours-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-  }
-  
-  .footer-map-container {
-    width: 100%; /* Container width is 100% of the footer-map */
-    padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
-    height: 0; /* Collapse the container's height */
-
-  }
-
+  justify-content: space-evenly;
 }
 
+
+
+.exhibition-item > * {
+  padding: 0em 3em 0em 3em;
+}
+
+.exhibition-cosmology {
+  background-image: url("/Assets/Photos/exhibitions/cos-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.exhibition-item-cosmology {
+  background: rgba(8, 6, 71, 0.7);
+  color: var(--yellow);
+}
+
+.exhibition-evolution {
+  background-image: url("/Assets/Photos/exhibitions/evo-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.exhibition-item-evolution {
+  background: rgba(255, 252, 233, 0.70);
+  color: var(--text);
+}
+
+.exhibition-ecology {
+  background-image: url("/Assets/Photos/exhibitions/eco-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.exhibition-item-ecology {
+  background: rgba(239, 250, 193, 0.90);
+  color: var(--text);
+}
+
+.exhibition-ai {
+  background-image: url("/Assets/Photos/exhibitions/ai-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.exhibition-item-ai {
+  background: rgba(218, 221, 216, 0.90);
+  color: var(--accent-darkest);
+}
+
+.exhibition-biology {
+  background-image: url("/Assets/Photos/exhibitions/bio-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.exhibition-item-biology {
+  background: rgba(209, 208, 251, 0.90);
+  color: var(--secondary-dark);
+}
 
 /* Utilities */
 /* Font Family */
@@ -492,75 +433,6 @@ justify-content: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
-}
-
-/* Responsive classes for small screens and up */
-/* Responsive classes for tablet-ish screens */
-@media (max-width: 1023px) {
-  .text-left-m {
-    text-align: left;
-  }
-  .text-center-m {
-    text-align: center;
-  }
-  .text-right-m {
-    text-align: right;
-  }
-
-  .index-news-element {
-    flex-direction: column; /* Switch all to column layout */
-  }
-
-  /* Ensure images and text in reversed items still follow the column layout */
-  .index-news-element.row-reverse {
-    flex-direction: column;
-  }
-
-  .content__section {
-    max-width: 90%;
-  }
-
-  .footer-nav {
-    display: flex;
-    flex-direction: column;
-    padding: 3em 0;
-    gap: 1em;
-  }
-}
-
-/* Responsive classes for phone sizes */
-@media (max-width: 767px) {
-  .text-left-s {
-    text-align: left;
-  }
-  .text-center-s {
-    text-align: center;
-  }
-  .text-right-s {
-    text-align: right;
-  }
-
-  .content__section {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 650px) {
-
-  .index-practical-info-list {
-    grid-template-columns: 1fr;
-  }
-
-  .index-practical-info-list li{
-    list-style-type: none;
-    background-image: url(/Assets/Photos/bullet-points/Planet.png);
-    background-repeat: no-repeat;
-    background-position-y: center;
-    list-style-position: inside;
-    line-height: 4em;
-    padding-left: 10rem;
-  }
-  
 }
 
 /* Colours */
@@ -650,8 +522,244 @@ justify-content: center;
   padding: 2em 0;
 }
 
+.padding-bottom-1em {
+  padding-bottom: 1em;
+}
+
 .flex {
   display: flex;
   justify-content: center;
   gap: 2em;
+}
+
+/* Adjust margins for medium screens */
+@media (max-width: 1800px) {
+  .opening-hours {
+    margin-right: -25%; /* Slightly smaller negative margin */
+  }
+}
+
+/* Further adjustments for smaller medium screens */
+@media (max-width: 1600px) {
+  .opening-hours {
+    display: flex;
+    padding-top: 3em;
+    margin-right: -24em;
+  }
+
+  .opening-hours-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .footer-map-container {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
+    height: 0; /* Collapse the container's height */
+  }
+}
+
+/* Further adjustments for smaller medium screens */
+@media (max-width: 1200px) {
+  .opening-hours {
+    display: flex;
+    padding-top: 3em;
+    margin-right: -24em;
+  }
+
+  .opening-hours-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .footer-map-container {
+    position: relative;
+    width: 80%; /* Container width is 100% of the footer-map */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
+    height: 0; /* Collapse the container's height */
+    margin-left: 20%;
+  }
+}
+
+/* Further adjustments for smaller medium screens */
+@media (max-width: 1100px) {
+  .opening-hours-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0em 0em;
+  }
+
+  .footer-hours-and-map {
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-2);
+    flex-direction: column;
+  }
+
+  .opening-hours {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin: auto;
+    padding: 3em 0em 3em 0em;
+  }
+
+  .footer-map h3 {
+    text-align: center;
+  }
+
+  .footer-map-container {
+    width: 100%;
+    padding-top: 0;
+    height: auto;
+    margin: 0 auto;
+    max-width: 500px;
+    padding-bottom: 2em;
+  }
+
+  .footer-map-container iframe {
+    position: static;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    border: 0;
+  }
+}
+
+/* Responsive classes for small screens and up */
+/* Responsive classes for tablet-ish screens */
+@media (max-width: 1023px) {
+  .text-left-m {
+    text-align: left;
+  }
+  .text-center-m {
+    text-align: center;
+  }
+  .text-right-m {
+    text-align: right;
+  }
+
+  .index-news-element {
+    flex-direction: column; /* Switch all to column layout */
+  }
+
+  /* Ensure images and text in reversed items still follow the column layout */
+  .index-news-element.row-reverse {
+    flex-direction: column;
+  }
+
+  .content__section {
+    max-width: 90%;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0 0em 0;
+    gap: 1em;
+  }
+}
+
+@media (max-width: 770px) {
+  .content__section {
+    width: 100%;
+  }
+
+  .content__section-90 {
+    width: 100%;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 5em 0 1em 0;
+    gap: 1em;
+  }
+
+  .opening-hours,
+  .footer-map-container {
+    padding: 1em;
+  }
+
+  .opening-hours-item {
+    font-size: var(--font-size-xl);
+    align-content: space-between;
+    padding-bottom: 2em;
+  }
+
+  .text-left-s {
+    text-align: left;
+  }
+  .text-center-s {
+    text-align: center;
+  }
+  .text-right-s {
+    text-align: right;
+  }
+
+  .content__section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .index-practical-info-list {
+    grid-template-columns: 1fr;
+  }
+
+  .index-practical-info-list li {
+    list-style-type: none;
+    background-image: url(/Assets/Photos/bullet-points/Planet.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    list-style-position: inside;
+    line-height: 4em;
+    padding-left: 10rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .content__section {
+    width: 100%;
+  }
+
+  .content__section-90 {
+    width: 100%;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0 1em 0;
+    gap: 1em;
+  }
+
+  .opening-hours,
+  .footer-map-container {
+    padding: 1em;
+  }
+
+  .opening-hours-item {
+    font-size: var(--font-size-l);
+    align-content: space-between;
+    padding-bottom: 2em;
+  }
+
+  .text-left-s {
+    text-align: left;
+  }
+  .text-center-s {
+    text-align: center;
+  }
+  .text-right-s {
+    text-align: right;
+  }
+
+  .content__section {
+    max-width: 100%;
+  }
 }
