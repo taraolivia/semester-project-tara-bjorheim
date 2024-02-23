@@ -299,6 +299,15 @@ footer {
   height: 100%; /* Height controlled by padding-top of the container */
 }
 
+.scroll-container {
+  /* This enables scroll snapping */
+  scroll-snap-type: y mandatory;
+
+  /* These ensure the container takes up the full viewport and can scroll */
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 .exhibition-item {
   max-width: 30em;
   height: fit-content;
@@ -308,6 +317,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  scroll-snap-align: start;
 }
 
 
