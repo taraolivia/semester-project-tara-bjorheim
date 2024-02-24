@@ -273,18 +273,23 @@ footer {
   flex-wrap: wrap; /* Allows items to wrap if needed */
 }
 
-.opening-hours {
+.opening-hours-background {
   display: flex;
   flex-direction: row;
-  padding: 3em; /* Consistent padding, adjust as needed */
   min-width: 300px; /* Minimum width before wrapping */
-  flex: 1; /* Allows flexing in relation to the map */
-  margin-right: -20%;
+  max-width: 50px;
   gap: 4em;
-  padding-top: 3em;
-  padding-bottom: 3em;
-  padding-left: 5em;
-  padding-right: 25em;
+  padding: 5em 70em 5em 5em;
+  z-index: 0;
+  position: relative;
+  margin-right: -30%;
+
+}
+
+.opening-hours {
+  min-width: 600px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .opening-hours-item {
@@ -296,7 +301,8 @@ footer {
 .footer-map {
   display: flex;
   flex-direction: column;
-  flex: 1; /* Allows flexing in relation to the opening hours */
+  flex: 2;
+  z-index: 1;
 }
 
 .footer-map-container {
@@ -304,14 +310,15 @@ footer {
   width: 100%; /* Container width is 100% of the footer-map */
   padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
   height: 0; /* Collapse the container's height */
+  z-index: 1;
 }
 
 .footer-map-container iframe {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%; /* Full width of the container */
-  height: 100%; /* Height controlled by padding-top of the container */
+  right: 0;
+  width: 80%; /* Full width of the container */
+  height: 80%; /* Height controlled by padding-top of the container */
 }
 
 .scroll-container {
@@ -614,19 +621,18 @@ flex-direction: column;
   gap: 2em;
 }
 
-/* Adjust margins for medium screens */
-@media (max-width: 1800px) {
-  .opening-hours {
-    margin-right: -10%; /* Slightly smaller negative margin */
-  }
+.pre-line {
+  white-space: pre-line;
 }
+
 
 /* Further adjustments for smaller medium screens */
 @media (max-width: 1600px) {
-  .opening-hours {
+  .opening-hours-background {
     display: flex;
     padding-top: 3em;
-    margin-right: -20em;
+    margin-right: -22em;
+    padding-right: 55em;
   }
 
   .opening-hours-item {
@@ -642,36 +648,39 @@ flex-direction: column;
   }
 }
 
+
+
+
+
 /* Further adjustments for smaller medium screens */
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
+
+
+  .opening-hours-background {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    min-width: none;
+    padding: 0 0 0 0;
+
+  }
+
   .opening-hours {
     display: flex;
-    padding-top: 3em;
-    margin-right: -24em;
-  }
-
-  .opening-hours-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  .footer-map-container {
-    position: relative;
-    width: 80%; /* Container width is 100% of the footer-map */
-    padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
-    height: 0; /* Collapse the container's height */
-    margin-left: 20%;
-  }
-}
-
-/* Further adjustments for smaller medium screens */
-@media (max-width: 1100px) {
-  .opening-hours-item {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding: 0em 0em;
+    place-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin: auto;
+    gap: 5em;
+    min-width: min-content;
+    padding: 5em 5em 5em 5em;
+}
+
+  .opening-hours-item {
+    display: flex;
+    flex-direction: column;
   }
 
   .footer-hours-and-map {
@@ -679,15 +688,6 @@ flex-direction: column;
     justify-content: center;
     background-color: var(--secondary-2);
     flex-direction: column;
-  }
-
-  .opening-hours {
-    display: flex;
-    flex-direction: row;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    margin: auto;
-    padding: 3em 0em 3em 0em;
   }
 
   .footer-map h3 {
@@ -768,7 +768,7 @@ flex-direction: column;
     gap: 1em;
   }
 
-  .opening-hours,
+  .opening-hours-background,
   .footer-map-container {
     padding: 1em;
   }
@@ -834,7 +834,7 @@ flex-direction: column;
     gap: 1em;
   }
 
-  .opening-hours,
+  .opening-hours-background,
   .footer-map-container {
     padding: 1em;
   }
