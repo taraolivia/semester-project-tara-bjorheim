@@ -9,6 +9,10 @@ body {
   text-align: left;
 }
 
+.decorative-line {
+  height: 2px;
+  width: 100%;
+}
 
 header {
   padding-top: 4em;
@@ -25,6 +29,7 @@ header {
   height: 7rem;
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 .navbar__content {
@@ -214,6 +219,18 @@ ul {
   line-height: 7rem;
 }
 
+.legal li {
+  list-style-type: none;
+  background-image: url(/Assets/Photos/bullet-points/Planet.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: auto;
+  padding-left: 4em;
+  margin-left: 1em;
+  list-style-position: inside;
+  line-height: 3.5em;
+}
+
 .index-practical-info-list-part {
   align-items: center;
   justify-content: center;
@@ -241,7 +258,7 @@ ul {
 
 .button:hover {
   cursor: pointer;
-  box-shadow: 0 0 20px var(--white);
+  box-shadow: 0 0 30px var(--primary);
 }
 
 .cosmo-glow:hover {
@@ -264,13 +281,15 @@ footer {
 .footer-nav {
   display: flex;
   justify-content: space-evenly;
-  padding: 3em 0;
+  padding: 3em 0 0 0;
 }
 
 .footer-hours-and-map {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; /* Allows items to wrap if needed */
+  width: 80%;
+  margin: auto;
 }
 
 .opening-hours-background {
@@ -279,23 +298,40 @@ footer {
   min-width: 300px; /* Minimum width before wrapping */
   max-width: 50px;
   gap: 4em;
-  padding: 5em 70em 5em 5em;
+  padding: 5em 55em 10em 5em;
   z-index: 0;
   position: relative;
-  margin-right: -30%;
-
+  margin-right: -20%;
 }
 
 .opening-hours {
-  min-width: 600px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.opening-hours-item {
   display: flex;
   flex-direction: column;
+}
+
+.opening-hour {
+  display: flex;
+  gap: 1em;
   justify-content: space-between;
+  border-bottom: 1px solid var(--primary-2); /* Optional: adds a line between items */
+  padding: 1em 0; /* Adjust padding as needed */
+}
+
+.day,
+.time {
+  flex: 1; /* Allows the elements to expand, ensuring alignment */
+  white-space: nowrap; /* Prevents wrapping */
+}
+.day {
+  min-width: 12em; /* Ensures sufficient width for the day part; adjust as needed */
+}
+
+.time {
+  text-align: right; /* Right-aligns the time */
+}
+
+.special-note .time {
+  text-align: left; /* Adjusts alignment for notes without a time */
 }
 
 .footer-map {
@@ -308,7 +344,7 @@ footer {
 .footer-map-container {
   position: relative;
   width: 100%; /* Container width is 100% of the footer-map */
-  padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
+  padding-top: 60%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
   height: 0; /* Collapse the container's height */
   z-index: 1;
 }
@@ -317,8 +353,8 @@ footer {
   position: absolute;
   top: 0;
   right: 0;
-  width: 80%; /* Full width of the container */
-  height: 80%; /* Height controlled by padding-top of the container */
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Height controlled by padding-top of the container */
 }
 
 .scroll-container {
@@ -345,8 +381,6 @@ footer {
   padding-top: 60px;
 }
 
-
-
 .exhibition-item > * {
   padding: 0em 3em 0em 3em;
 }
@@ -371,7 +405,7 @@ footer {
 }
 
 .exhibition-item-evolution {
-  background: rgba(255, 252, 233, 0.70);
+  background: rgba(255, 252, 233, 0.7);
   color: var(--text);
 }
 
@@ -383,7 +417,7 @@ footer {
 }
 
 .exhibition-item-ecology {
-  background: rgba(239, 250, 193, 0.90);
+  background: rgba(239, 250, 193, 0.9);
   color: var(--text);
 }
 
@@ -395,7 +429,7 @@ footer {
 }
 
 .exhibition-item-ai {
-  background: rgba(218, 221, 216, 0.90);
+  background: rgba(218, 221, 216, 0.9);
   color: var(--accent-darkest);
 }
 
@@ -407,63 +441,49 @@ footer {
 }
 
 .exhibition-item-biology {
-  background: rgba(209, 208, 251, 0.90);
+  background: rgba(209, 208, 251, 0.9);
   color: var(--secondary-dark);
 }
 
-
 .info-card-section {
-text-align: center;
-font-family: var(--font-noto-sans);
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-align-content: center;
-gap: 5em;
-align-items: stretch;
+  text-align: center;
+  font-family: var(--font-noto-sans);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 5em;
+  align-items: stretch;
 }
 
 .info-card {
-
-    flex: 1 1 auto; /* flex-grow, flex-shrink, flex-basis */
-    min-width: 0; /* Prevents flex items from shrinking past content size */
-    width: calc(100% / 3); /* Adjust the denominator based on the number of items per row you desire */
-    max-width: 35em;
-    min-width: 28em;
+  flex: 1 1 auto; /* flex-grow, flex-shrink, flex-basis */
+  min-width: 0; /* Prevents flex items from shrinking past content size */
+  width: calc(100% / 3); /* Adjust the denominator based on the number of items per row you desire */
+  max-width: 35em;
+  min-width: 28em;
 }
 
 .info-card > * {
   padding: 1em 2em 1em 2em;
 }
 .info-card-title {
-font-size: var(--font-size-xl);
-border-radius: 0.8rem 0.8rem 0rem 0rem;
-padding: 0.8em 2em 0.8em 2em;
+  font-size: var(--font-size-xl);
+  border-radius: 0.8rem 0.8rem 0rem 0rem;
+  padding: 0.8em 2em 0.8em 2em;
 }
 
 .info-card-text {
-font-size: var(--font-size-l);
-border-radius: 0rem 0rem 0.8rem 0.8rem;
-padding: 1em 2em 1em 2em;
-min-height: 20em;
-justify-content: space-evenly;
-display: flex;
-flex-direction: column;
+  font-size: var(--font-size-l);
+  border-radius: 0rem 0rem 0.8rem 0.8rem;
+  padding: 1em 2em 1em 2em;
+  min-height: 20em;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Utilities */
 /* Font Family */
@@ -623,64 +643,38 @@ flex-direction: column;
 
 .pre-line {
   white-space: pre-line;
+  max-width: 65em;
 }
 
+@media (max-width: 1900px) {
+  .opening-hours-background {
+    padding: 5em 48em 5em 5em;
+    margin-right: -15%;
+  }
+}
+
+@media (max-width: 1700px) {
+  .opening-hours-background {
+    padding: 5em 45em 5em 5em;
+    margin-right: -15%;
+  }
+}
 
 /* Further adjustments for smaller medium screens */
 @media (max-width: 1600px) {
   .opening-hours-background {
-    display: flex;
-    padding-top: 3em;
-    margin-right: -22em;
-    padding-right: 55em;
-  }
-
-  .opening-hours-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  .footer-map-container {
-    position: relative;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio - adjust if you want 5:3, use 60% */
-    height: 0; /* Collapse the container's height */
+    padding: 5em 35em 5em 5em;
+    margin-right: -12%;
   }
 }
 
-
-
-
-
-/* Further adjustments for smaller medium screens */
 @media (max-width: 1350px) {
-
-
   .opening-hours-background {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    min-width: none;
-    padding: 0 0 0 0;
-
-  }
-
-  .opening-hours {
-    display: flex;
     justify-content: center;
-    place-content: center;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    margin: auto;
-    gap: 5em;
-    min-width: min-content;
-    padding: 5em 5em 5em 5em;
-}
-
-  .opening-hours-item {
-    display: flex;
-    flex-direction: column;
+    padding: 1em; 
+    margin-right: 0; 
+    max-width: none;
+    gap: 2em; 
   }
 
   .footer-hours-and-map {
@@ -688,9 +682,11 @@ flex-direction: column;
     justify-content: center;
     background-color: var(--secondary-2);
     flex-direction: column;
+    width: 100%;
+    margin: auto;
   }
 
-  .footer-map h3 {
+  .footer-hours-and-map h3 {
     text-align: center;
   }
 
@@ -699,16 +695,36 @@ flex-direction: column;
     padding-top: 0;
     height: auto;
     margin: 0 auto;
-    max-width: 500px;
-    padding-bottom: 2em;
+    padding-bottom: 5em;
   }
 
   .footer-map-container iframe {
-    position: static;
     width: 100%;
     height: auto;
     min-height: 300px;
+    max-height: 400px;
     border: 0;
+  }
+
+  .footer-map {
+    padding: 1em 1em 16em 1em;
+  }
+
+  .opening-hours {
+    padding: 0;
+    margin: 0;
+  }
+
+  .opening-hour {
+    border-bottom: 1px solid var(--primary-2);
+    padding: 1em 0;
+  }
+
+  .day,
+  .time {
+    flex: 1;
+    white-space: nowrap;
+    max-width: 100%;
   }
 }
 
@@ -745,16 +761,18 @@ flex-direction: column;
     gap: 1em;
   }
 
-
   .exhibition-item {
     font-size: var(--font-size-l);
   }
-
 }
 
 @media (max-width: 770px) {
   .content__section {
     width: 100%;
+  }
+
+  .content__section {
+    max-width: 100%;
   }
 
   .content__section-90 {
@@ -768,15 +786,12 @@ flex-direction: column;
     gap: 1em;
   }
 
-  .opening-hours-background,
-  .footer-map-container {
-    padding: 1em;
-  }
-
-  .opening-hours-item {
-    font-size: var(--font-size-xl);
-    align-content: space-between;
-    padding-bottom: 2em;
+    .footer-map-container {
+    width: 100%;
+    padding-top: 0;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 12em;
   }
 
   .text-left-s {
@@ -789,16 +804,18 @@ flex-direction: column;
     text-align: right;
   }
 
-  .content__section {
-    max-width: 100%;
-  }
-
   .exhibition-item {
     font-size: var(--font-size-xl);
   }
 
   .exhibition-item > * {
     padding: 0em 2em 0em 2em;
+  }
+
+  .legal li {
+    background-size: 5%;
+    padding-left: 5em;
+    margin-left: 1em;
   }
 }
 
@@ -834,17 +851,6 @@ flex-direction: column;
     gap: 1em;
   }
 
-  .opening-hours-background,
-  .footer-map-container {
-    padding: 1em;
-  }
-
-  .opening-hours-item {
-    font-size: var(--font-size-l);
-    align-content: space-between;
-    padding-bottom: 2em;
-  }
-
   .text-left-s {
     text-align: left;
   }
@@ -866,4 +872,19 @@ flex-direction: column;
   .exhibition-item > * {
     padding: 0em 1em 0em 1em;
   }
+}
+
+.content__section > p,
+.content__section > h1,
+.content__section > h2,
+.content__section > h3,
+.content__section > h4,
+.content__section > li,
+.content__section > ul {
+  max-width: 90%;
+  margin: auto;
+}
+
+p {
+  max-width: 60em;
 }
