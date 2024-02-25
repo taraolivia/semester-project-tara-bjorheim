@@ -46,8 +46,8 @@ a:visited {
 }
 
 /* Underline on hover/focus for accessibility */
-a:hover,
-a:focus {
+.navbar__content a:hover,
+.navbar__content a:focus {
     text-decoration: underline;
     text-decoration-color: var(--primary);
   }
@@ -55,7 +55,8 @@ a:focus {
 /* Styling for the active link */
 [aria-current="page"] a,
 [aria-current="page"] a:hover,
-[aria-current="page"] a:focus {
+[aria-current="page"] a:focus,
+[aria-current="page"] p {
   font-weight: bold;
   text-decoration: none;
   cursor: default;
