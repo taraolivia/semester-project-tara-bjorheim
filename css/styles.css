@@ -59,6 +59,86 @@ header {
   height: auto;
 }
 
+  .navbar-smaller-links {
+    display: flex;
+    flex-direction: row;
+      gap: 2em;
+  height: 7rem;
+  line-height: 7rem;
+  justify-content: center;
+  }
+
+ 
+
+/* Hide the second logo on larger screens if not needed */
+.logo-secondary {
+  display: none;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+
+  .header-nav {
+    height: fit-content;
+    padding-bottom: 1em;
+  }
+  .navbar__content {
+    flex-direction: column; /* Corrected class name and set to column */
+    align-items: center; /* Center-align items vertically */
+    gap: 0em; /* Adjust gap as needed */
+    padding: 5em 0;
+  }
+
+  .navbar-smaller {
+    display: flex;
+    flex-direction: column; /* Ensure logos are stacked */
+    align-items: center; /* Center-align the logos */
+  }
+
+  .logo-secondary {
+    display: block; /* Ensure the second logo is displayed */
+  }
+
+  .logo-primary {
+    display: none; /* Optionally hide the first logo */
+  }
+
+  .navbar-smaller-links {
+    flex-direction: row; /* Stack links vertically if desired */
+    align-items: center; /* Center-align the links */
+      display: flex;
+  line-height: 7rem;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4em 0em 0em 0em;
+  gap: 1em;
+  }
+
+
+
+  .navbar__content-item {
+    text-align: center; /* Ensure text is centered within each item */
+  }
+
+
+  header {
+  padding-top: 11em;
+  padding-bottom: 3em;
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
 #hero-img {
   margin: auto;
 }
@@ -383,7 +463,7 @@ ul {
 .button {
   min-height: 7rem;
   max-width: 100%;
-  width: 80%;
+  width: 60%;
   padding: 1rem 5rem;
   text-wrap: wrap;
   border-radius: 15px;
