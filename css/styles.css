@@ -120,12 +120,16 @@ header {
 .contact-card-form input[type="submit"] {
   width: 100%;
   margin: 10px 0;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .contact-card-form input[type="submit"] {
   margin: auto;
-  margin-bottom: 1em;
+  border: none;
+  width: 100%;
+  padding: 0.5em 0.5em;
+  margin: 1em auto 0 auto;
+  min-width: fit-content;
 }
 
 .map-container {
@@ -149,7 +153,6 @@ header {
 .decorative-line--form {
   height: 2px;
   background: var(--accent);
-  margin-bottom: 1em;
   color: var(--white);
 }
 
@@ -167,19 +170,23 @@ textarea {
   resize: none;
 }
 
-.contact-card-form input[type="submit"] {
-  width: 100%;
-  padding: 0.5em 4em;
-  margin: 0 auto;
-  min-width: fit-content;
-}
+
 
 @media (max-width: 1100px) {
   .contact-card-form,
   .map-container {
     flex-basis: 100%;
-    min-height: 200px;
+    min-height: 300px;
   }
+
+.contact-card-form label {
+  padding: 0;
+}
+
+.contact-card-form input[type="submit"] {
+  width: 60%;
+}
+
 }
 
 .index-hero {
@@ -376,7 +383,7 @@ ul {
 .button {
   min-height: 7rem;
   max-width: 100%;
-  min-width: fit-content;
+  width: 80%;
   padding: 1rem 5rem;
   text-wrap: wrap;
   border-radius: 15px;
@@ -1000,6 +1007,22 @@ footer {
     font-size: var(--font-size-xs);
   }
 }
+
+
+@media (max-width: 500px) {
+.exhibition-gallery-wrapper {
+  gap: 0em;
+  padding: 3em 0em 0em 0em;
+}
+
+.button {
+  width: 80%;
+}
+
+
+
+}
+
 
 @media (max-width: 400px) {
   .content__section {
