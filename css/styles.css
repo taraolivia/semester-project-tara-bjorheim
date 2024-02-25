@@ -434,12 +434,17 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 4em 0 1em 0;
+  max-width: 1800px;
+  margin: auto;
 }
+
+
+
 
 .footer-hours-and-map {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allows items to wrap if needed */
+  flex-wrap: wrap;
   width: 80%;
   margin: auto;
 }
