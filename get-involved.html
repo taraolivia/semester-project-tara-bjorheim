@@ -11,10 +11,176 @@
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Play:wght@400;700&family=Revalia&display=swap");
     </style>
   </head>
-  <body>
-    <nav></nav>
-    <header></header>
-    <main></main>
-    <footer></footer>
+  <body class="bg-background">
+    <nav class="header-nav">
+      <div class="navbar__content ff-play fs-l text-center">
+        <div class="navbar-smaller">
+          <a href="index.html" class="navbar-logo">
+            <img src="Assets/Photos/logo.png" alt="Website Logo 1" class="logo-primary" />
+          </a>
+          <a href="index.html" class="navbar-logo">
+            <img src="Assets/Photos/logo-1line.png" alt="Website Logo 2" class="logo-secondary" />
+            <!-- Second logo initially hidden -->
+          </a>
+        </div>
+
+        <div class="navbar-smaller-links">
+          <a href="index.html">
+            <div class="navbar__content-item">
+              <p>HOME</p>
+            </div>
+          </a>
+
+          <a href="exhibitions.html">
+            <div class="navbar__content-item">
+              <p>EXHIBITIONS</p>
+            </div>
+          </a>
+
+          <a href="get-involved.html" aria-current="page">
+            <div class="navbar__content-item bg-background">
+              <p>GET INVOLVED</p>
+            </div>
+          </a>
+
+          <a href="practical-info.html">
+            <div class="navbar__content-item">
+              <p>PRACTICAL INFO</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <header class="text-center">
+      <section class="content__section-header">
+        <h1 class="ff-revalia fs-xl padding-top-bottom-2em">Ways you can help support the museum</h1>
+      </section>
+    </header>
+
+    <main class="text-left">
+      <section class="content__section pre-line">
+        <div class="get-involved-part-1">
+          <div class="text-content-1">
+            <h2 class="ff-play fs-xxl">Donate</h2>
+            <p>Donations are very welcome and are an important way we keep this museum open and accessible to the whole community.</p>
+            <p>You can also support us by donating items of interest to the museum’s collections. If you have some item or collection that you think others would enjoy, please let us know by contacting our Collections Department and they will be able to assist you.</p>
+          </div>
+          <div class="image-content-1">
+            <img src="Assets/Photos/get-involved/head.png" alt="" />
+          </div>
+        </div>
+
+        <div class="get-involved-part-2">
+          <div class="get-involved-2-text">
+            <h2 class="ff-play fs-xxl">Volunteer</h2>
+            <p>A number of people volunteer their time and effort to keep the displays in good order and ready for visitors to come and enjoy.</p>
+            <p>Volunteering has its perks including getting to see behind the scenes of a working museum, access to staff-only lectures, and a monthly lunch where all staff and volunteers come together to discuss ideas for future exhibits and strategies for the museum.</p>
+            <p>You can help volunteer in a number of different spheres. Please contact us if you’d like to find out more about how you can get involved.</p>
+          </div>
+          <img src="Assets/Photos/get-involved/man.png" alt="" />
+        </div>
+
+        <div class="get-involved-part-1">
+                    <div class="text-content-1">
+          <h2 class="ff-play fs-xxl">Internships</h2>
+
+          <p>Well you could be just the right person to enjoy an internship at the museum. You’ll be learning from a number of different academics and people who are passionate about science and sharing it with the wider community.</p>
+                    </div>
+          <img src="Assets/Photos/get-involved/museum.png" alt="" />
+        </div>
+
+        <div class="text-center">
+          <h3>If any of these may interest you, please get in touch with us</h3>
+          <img src="Assets/Photos/get-involved/museum-inside.png" alt="" />
+        </div>
+        <a href="practical-info.html" class="button bg-primary-2">contact</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="bg-primary-3">
+        <a id="footer-logo" href="index.html">
+          <img src="Assets/Photos/index/logo.png" alt="Galaxy Garden Community Museum logo. A test tube with yellow liquid surrounded by stars and a planet-ring" />
+        </a>
+
+        <nav>
+          <div class="ff-play fs-xl text-center footer-nav">
+            <div>
+              <a href="index.html">HOME</a>
+            </div>
+            <div>
+              <a href="exhibitions.html">EXHIBITIONS</a>
+            </div>
+            <div>
+              <a href="get-involved.html">GET INVOLVED</a>
+            </div>
+            <div>
+              <a href="practical-info.html">PRACTICAL INFO</a>
+            </div>
+          </div>
+        </nav>
+
+        <section class="content__section">
+          <div class="footer-hours-and-map">
+            <div class="bg-secondary-2 opening-hours-background">
+              <div class="opening-hours fs-l">
+                <h3 class="fs-xxl fw-bold ff-play padding-bottom-1em">Opening hours</h3>
+                <div class="opening-hour">
+                  <p class="day">Monday - Friday</p>
+                  <p class="time">9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="opening-hour">
+                  <p class="day">Weekends</p>
+                  <p class="time">10:00 AM - 6:00 PM</p>
+                </div>
+                <div class="opening-hour">
+                  <p class="day">School Holidays</p>
+                  <p class="time">10:00 AM - 6:00 PM</p>
+                </div>
+                <div class="opening-hour special-note text-left-m text-left-s">
+                  <p class="day">Closed on Major Holidays</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-map">
+              <h3 class="fs-xxl fw-bold ff-play text-right padding-bottom-1em">Where to find us</h3>
+              <div class="footer-map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61636354.61274505!2d126.0571289062501!3d19.456233596018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x795400f0f0219a91%3A0x92dfa07897d13593!2sGalaxy%20Garden!5e0!3m2!1sno!2sbe!4v1708618736252!5m2!1sno!2sbe" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="contact-info-wrapper fs-xl">
+          <div class="contact-info-element">
+            <img src="Assets/Photos/contact/icons8-mail-96 (1).png" alt="Pink envelope icon" />
+            <p>Post@GalaxyGarden.com</p>
+          </div>
+          <div class="contact-info-element">
+            <img src="Assets/Photos/contact/icons8-phone-96.png" alt="Pink telephone icon" />
+            <p>+123 456 789</p>
+          </div>
+          <div class="contact-info-element">
+            <img src="Assets/Photos/contact/icons8-map-marker-96.png" alt="Pink placement pin icon" />
+            <p>123 Street 456 Building</p>
+          </div>
+        </div>
+
+        <div class="bg-primary text-center fs-l flex">
+          <section class="content__section">
+            <a class="fw-bold" href="documents.html">Legal</a>
+            <div class="flex padding-top-bottom-1em">
+              <a href="documents.html">Terms and Conditions</a>
+              <a href="documents.html">Privacy Policy</a>
+            </div>
+            <p class="padding-top-bottom-1em">
+              Designed and coded by Tara Olivia Bjørheim. Icons by
+              <a href="https://icons8.com/">icons8</a>
+            </p>
+          </section>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
