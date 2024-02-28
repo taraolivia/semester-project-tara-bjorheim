@@ -24,7 +24,7 @@ header {
 }
 
 .content__section-header {
-  max-width: 70%;
+  max-width: 80%;
   margin: auto;
 }
 
@@ -38,35 +38,43 @@ header {
 
 .navbar__content {
   display: flex;
-  max-width: 90%;
-  margin: auto;
-  gap: 2em;
-  height: 7rem;
-  line-height: 7rem;
   justify-content: center;
+  margin: auto;
+  max-width: 95%;
+  padding-right: 2em;
+}
+
+.navbar__content-item > * {
+  flex: 1; /* Allows flex children to grow and take up equal space */
 }
 
 .navbar__content-item {
   background-color: var(--secondary-2);
-  width: 11em;
-  min-height: fit-content;
+  min-height: 7rem;
+  white-space: normal;
+  padding: 0em 1em;
+  line-height: 7rem;
+      width: 9.5em;
+
 }
 
-#logo {
-  position: relative;
-  margin-top: 0.5em;
-  margin-left: -1em;
-  height: auto;
-}
-
-.navbar-smaller-links {
+.navbar-links {
   display: flex;
   flex-direction: row;
-  gap: 2em;
-  height: 7rem;
-  line-height: 7rem;
-  justify-content: center;
+  gap: 3%;
 }
+
+.logo-primary {
+  padding-top: 10px; /* Lower the logo */
+  width: 80%; /* Adjust based on your logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.navbar-smaller {
+padding: 0%;
+}
+
+
 
 /* Hide the second logo on larger screens if not needed */
 .logo-secondary {
@@ -75,50 +83,7 @@ header {
 
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
-  .header-nav {
-    height: fit-content;
-    padding-bottom: 1em;
-  }
-  .navbar__content {
-    flex-direction: column; /* Corrected class name and set to column */
-    align-items: center; /* Center-align items vertically */
-    gap: 0em; /* Adjust gap as needed */
-    padding: 5em 0;
-  }
 
-  .navbar-smaller {
-    display: flex;
-    flex-direction: column; /* Ensure logos are stacked */
-    align-items: center; /* Center-align the logos */
-  }
-
-  .logo-secondary {
-    display: block; /* Ensure the second logo is displayed */
-  }
-
-  .logo-primary {
-    display: none; /* Optionally hide the first logo */
-  }
-
-  .navbar-smaller-links {
-    flex-direction: row; /* Stack links vertically if desired */
-    align-items: center; /* Center-align the links */
-    display: flex;
-    line-height: 7rem;
-    justify-content: space-between;
-    width: 100%;
-    padding: 4em 0em 0em 0em;
-    gap: 1em;
-  }
-
-  .navbar__content-item {
-    text-align: center; /* Ensure text is centered within each item */
-  }
-
-  header {
-    padding-top: 11em;
-    padding-bottom: 3em;
-  }
 }
 
 #hero-img {
@@ -288,6 +253,8 @@ textarea {
   flex-direction: row;
   align-items: stretch;
   flex-wrap: wrap;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .index-news-element {
@@ -344,7 +311,7 @@ textarea {
 }
 
 .exhibition-gallery-element-name:hover {
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   color: black;
 }
 
@@ -441,7 +408,7 @@ ul {
 
 .button {
   min-height: 7rem;
-  max-width: 100%;
+  max-width: 30em;
   width: 60%;
   padding: 1rem 5rem;
   text-wrap: wrap;
@@ -567,8 +534,8 @@ footer {
   justify-content: space-between;
   margin: auto;
   line-height: 3em;
-  gap: 2em;
-  max-width: 1500px;
+  gap: 1em;
+  max-width: 1100px;
   padding: 0em 0em 1em 0em;
 }
 
@@ -580,7 +547,7 @@ footer {
   border: 2px;
   border-style: solid;
   border-color: var(--background);
-  padding: 0.3em 2em 0.3em 1em;
+  padding: 0.2em 2em 0.2em 0.5em;
   flex: 1 1 calc(25% - 3em); /* Adjust the flex-basis here */
   align-content: space-between;
   justify-content: space-between;
@@ -963,9 +930,7 @@ footer {
 .bg-primary-4 {
   background-color: var(--primary-4);
 }
-.bg-primary-5 {
-  background-color: var(--primary-5);
-}
+
 
 /* Secondary Colors */
 .bg-secondary {
@@ -980,6 +945,7 @@ footer {
 .bg-secondary-4 {
   background-color: var(--secondary-4);
 }
+
 .bg-secondary-dark {
   background-color: var(--secondary-dark);
 }
@@ -1051,16 +1017,23 @@ footer {
   max-width: 65em;
 }
 
+@media (max-width: 2100px) {
+  .opening-hours-background {
+    padding: 5em 45em 5em 5em;
+    margin-right: -15%;
+  }
+}
+
 @media (max-width: 1900px) {
   .opening-hours-background {
-    padding: 5em 48em 5em 5em;
+    padding: 5em 40em 5em 5em;
     margin-right: -15%;
   }
 }
 
 @media (max-width: 1700px) {
   .opening-hours-background {
-    padding: 5em 45em 5em 5em;
+    padding: 5em 40em 5em 5em;
     margin-right: -15%;
   }
 }
@@ -1068,7 +1041,7 @@ footer {
 /* Further adjustments for smaller medium screens */
 @media (max-width: 1600px) {
   .opening-hours-background {
-    padding: 5em 35em 5em 5em;
+    padding: 5em 32em 5em 5em;
     margin-right: -12%;
   }
 }
@@ -1146,26 +1119,34 @@ footer {
 }
 
 @media (max-width: 1100px) {
+
+.header-nav {
+  height: 6rem;
+}
+
   .navbar__content {
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    margin: auto;
-    gap: 0.5em;
-    height: 7rem;
-    line-height: 7rem;
-    justify-content: center;
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-s);
   }
 
   .navbar__content-item {
     width: 10em;
+    max-height: 6rem;
+    min-height: 6rem;
+    line-height: 6rem;
+
   }
+
+  .logo-primary {
+    margin-top: 5px;
+  }
+
 
   .group-info-card {
     max-width: 40em;
   }
 }
+
+
 
 /* Responsive classes for small screens and up */
 /* Responsive classes for tablet-ish screens */
@@ -1211,6 +1192,65 @@ footer {
 }
 
 @media (max-width: 900px) {
+
+.header-nav {
+  height: 12rem;
+}
+
+.navbar__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 100%;
+  padding: 1px 0 0 0;
+  
+}
+
+  .navbar__content-item {
+    max-height: 5rem;
+    min-height: 5rem;
+    line-height: 5rem;
+    justify-content: space-evenly;
+  max-width: 100%;
+  margin: auto;
+  width: auto;
+  }
+
+
+
+  .navbar-links {
+  display: flex; /* Enables flexbox layout */
+  justify-content: space-between; /* Distributes space between items */
+  align-items: center; /* Aligns items vertically in the center */
+  width: 100%; /* Ensures the container takes up the full width */
+  margin: auto;
+}
+
+.navbar__content-item {
+  flex: 1; /* Allows each item to grow and take up equal space */
+  text-align: center; /* Centers the text within each item */
+}
+
+
+  .logo-primary {
+    display: none;
+  }
+
+  .logo-secondary {
+    display: block;
+    margin: auto;
+    padding: 1em 0em;
+    height: 100%;
+    width: auto;
+  }
+
+
+
+
+
+
 }
 
 @media (max-width: 770px) {
