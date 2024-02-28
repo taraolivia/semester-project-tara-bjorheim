@@ -54,8 +54,7 @@ header {
   white-space: normal;
   padding: 0em 1em;
   line-height: 7rem;
-      width: 9.5em;
-
+  width: 9.5em;
 }
 
 .navbar-links {
@@ -71,10 +70,8 @@ header {
 }
 
 .navbar-smaller {
-padding: 0%;
+  padding: 0%;
 }
-
-
 
 /* Hide the second logo on larger screens if not needed */
 .logo-secondary {
@@ -83,7 +80,6 @@ padding: 0%;
 
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
-
 }
 
 #hero-img {
@@ -770,7 +766,6 @@ footer {
   height: auto;
 }
 
-
 .get-involved-part-2 {
   display: flex;
   flex-direction: row-reverse;
@@ -787,29 +782,24 @@ footer {
   max-width: 25em;
 }
 
-
 /* Adjustments for smaller screens */
 @media (max-width: 1200px) {
+  .get-involved-part-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-.get-involved-part-2 {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 2em;
-  justify-content: center;
-  flex-wrap: wrap;
+  .get-involved-2-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    max-width: 32em;
+  }
 }
-
-.get-involved-2-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1em;
-  max-width: 32em;
-}
-
-}
-
-
 
 /* Adjustments for smaller screens */
 @media (max-width: 1000px) {
@@ -830,12 +820,12 @@ footer {
   }
 
   .get-involved-2-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1em;
-  max-width: 90%;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    max-width: 90%;
+  }
 }
 
 /* Adjustments for smaller screens */
@@ -930,7 +920,6 @@ footer {
 .bg-primary-4 {
   background-color: var(--primary-4);
 }
-
 
 /* Secondary Colors */
 .bg-secondary {
@@ -1119,10 +1108,9 @@ footer {
 }
 
 @media (max-width: 1100px) {
-
-.header-nav {
-  height: 6rem;
-}
+  .header-nav {
+    height: 6rem;
+  }
 
   .navbar__content {
     font-size: var(--font-size-s);
@@ -1133,23 +1121,17 @@ footer {
     max-height: 6rem;
     min-height: 6rem;
     line-height: 6rem;
-
   }
 
   .logo-primary {
     margin-top: 5px;
   }
 
-
   .group-info-card {
     max-width: 40em;
   }
 }
 
-
-
-/* Responsive classes for small screens and up */
-/* Responsive classes for tablet-ish screens */
 @media (max-width: 1023px) {
   .text-left-m {
     text-align: left;
@@ -1192,46 +1174,39 @@ footer {
 }
 
 @media (max-width: 900px) {
+  .header-nav {
+    height: 12rem;
+  }
 
-.header-nav {
-  height: 12rem;
-}
+  #hero-img {
+    margin-top: 5rem;
+  }
 
-.navbar__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  max-width: 100%;
-  padding: 1px 0 0 0;
-  
-}
+  .navbar__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 100%;
+    padding: 1px 0 0 0;
+  }
 
   .navbar__content-item {
     max-height: 5rem;
     min-height: 5rem;
     line-height: 5rem;
-    justify-content: space-evenly;
-  max-width: 100%;
-  margin: auto;
-  width: auto;
-  }
-
-
+}
+  
 
   .navbar-links {
-  display: flex; /* Enables flexbox layout */
-  justify-content: space-between; /* Distributes space between items */
-  align-items: center; /* Aligns items vertically in the center */
-  width: 100%; /* Ensures the container takes up the full width */
-  margin: auto;
-}
-
-.navbar__content-item {
-  flex: 1; /* Allows each item to grow and take up equal space */
-  text-align: center; /* Centers the text within each item */
-}
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center; /* Aligns items vertically in the center */
+    width: 100%; /* Ensures the container takes up the full width */
+    margin: auto;
+    gap: 0;
+  }
 
 
   .logo-primary {
@@ -1245,10 +1220,33 @@ footer {
     height: 100%;
     width: auto;
   }
+}
+
+@media (max-width: 768px) {
+.header-nav {
+  height: 13.5rem;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Correct place for spacing control */
+  margin: auto;
+  width: 100%;
+  gap: 0em; /* Correct place for gap */
+}
+
+.navbar__content-item {
+  max-height: 5rem;
+  min-height: 5rem;
+  line-height: 5rem;
+}
 
 
 
-
+  .logo-primary {
+    display: none;
+  }
 
 
 }
@@ -1305,8 +1303,6 @@ footer {
     margin-left: 1em;
   }
 
- 
-
   .group-info-card {
     max-width: 50em;
   }
@@ -1331,6 +1327,8 @@ footer {
     padding: 0;
     font-size: var(--font-size-xs);
   }
+
+
 }
 
 @media (max-width: 500px) {
@@ -1346,6 +1344,13 @@ footer {
   .info-card-section {
     gap: 2em;
   }
+
+    .navbar__content-item {
+  max-height: 5rem;
+  min-height: 5rem;
+  line-height: 5rem;
+    width: fit-content;
+}
 }
 
 @media (max-width: 400px) {
