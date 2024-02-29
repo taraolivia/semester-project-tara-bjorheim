@@ -715,9 +715,7 @@ footer {
   font-size: var(--font-size-l);
 }
 
-.group-info-card-special {
-  align-content: space-between;
-}
+
 
 .group-info-card img {
   height: 150px;
@@ -728,6 +726,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 5em;
+  justify-content: center;
 }
 
 #people {
