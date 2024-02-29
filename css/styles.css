@@ -187,7 +187,7 @@ textarea {
   background: none;
   border: none;
   margin-top: 10px;
-  color: var(--accent);
+  color: var(--text);
   width: 100%;
   font-size: var(--font-size-l);
   word-break: break-all;
