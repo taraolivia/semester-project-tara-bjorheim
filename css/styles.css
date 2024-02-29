@@ -1007,21 +1007,21 @@ footer {
   max-width: 65em;
 }
 
-@media (max-width: 2100px) {
+@media screen and (max-width: 2100px) {
   .opening-hours-background {
     padding: 5em 45em 5em 5em;
     margin-right: -15%;
   }
 }
 
-@media (max-width: 1900px) {
+@media screen and (max-width: 1900px) {
   .opening-hours-background {
     padding: 5em 40em 5em 5em;
     margin-right: -15%;
   }
 }
 
-@media (max-width: 1700px) {
+@media screen and (max-width: 1700px) {
   .opening-hours-background {
     padding: 5em 40em 5em 5em;
     margin-right: -15%;
@@ -1029,14 +1029,14 @@ footer {
 }
 
 /* Further adjustments for smaller medium screens */
-@media (max-width: 1600px) {
+@media screen and (max-width: 1600px) {
   .opening-hours-background {
     padding: 5em 32em 5em 5em;
     margin-right: -12%;
   }
 }
 
-@media (max-width: 1350px) {
+@media screen and (max-width: 1350px) {
   .opening-hours-background {
     justify-content: center;
     padding: 1em;
@@ -1108,7 +1108,7 @@ footer {
   }
 }
 
-@media (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
   .header-nav {
     height: 6rem;
   }
@@ -1133,7 +1133,7 @@ footer {
   }
 }
 
-@media (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
   .text-left-m {
     text-align: left;
   }
@@ -1174,7 +1174,7 @@ footer {
   }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .header-nav {
     height: 12rem;
   }
@@ -1227,7 +1227,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 .header-nav {
   height: 13.5rem;
 }
@@ -1257,7 +1257,7 @@ footer {
 
 }
 
-@media (max-width: 770px) {
+@media screen and (max-width: 770px) {
   .content__section {
     width: 100%;
   }
@@ -1314,7 +1314,7 @@ footer {
   }
 }
 
-@media (max-width: 650px) {
+@media screen and (max-width: 650px) {
   .index-practical-info-list {
     grid-template-columns: 1fr;
   }
@@ -1337,7 +1337,7 @@ footer {
 
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .exhibition-gallery-wrapper {
     gap: 0em;
     padding: 3em 0em 0em 0em;
@@ -1359,7 +1359,7 @@ footer {
 }
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
   .content__section {
     width: 100%;
   }
@@ -1412,3 +1412,4 @@ footer {
 p {
   max-width: 60em;
 }
+
