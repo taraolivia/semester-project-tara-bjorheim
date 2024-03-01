@@ -80,6 +80,7 @@ header {
 
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
+
 }
 
 #hero-img {
@@ -207,6 +208,8 @@ textarea {
   .contact-card-form input[type="submit"] {
     width: 60%;
   }
+
+
 }
 
 .index-hero {
@@ -431,11 +434,13 @@ ul {
 footer {
   display: flex;
   flex-direction: column;
+  scroll-snap-align: none;
+
 }
 
 #footer-logo {
   position: absolute;
-  margin: -5em auto 5em auto;
+  margin: -4.8em auto 5em auto;
   width: 100%;
   height: auto;
   display: flex;
@@ -561,9 +566,11 @@ footer {
 }
 
 .header__exhibitions,
+.header-nav-exhibitions,
 .exhibition-item {
   scroll-snap-align: start;
 }
+
 
 .exhibition-item {
   max-width: 30em;
@@ -574,7 +581,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding-top: 2em;
+  padding-top: 5em;
+  padding-bottom: auto;
   padding-bottom: 1em;
 }
 
@@ -582,8 +590,12 @@ footer {
   padding: 0em 3em 0em 3em;
 }
 
+.exhibition-item:last-child {
+  padding-bottom: 100px; /* Adjust based on the footer's height */
+}
+
 .exhibition-cosmology {
-  background-image: url("/Assets/Photos/exhibitions/cos-bg.jpg");
+  background-image: url("/Assets/Photos/exhibitions/Compressed/cos-bg-min.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -595,7 +607,7 @@ footer {
 }
 
 .exhibition-evolution {
-  background-image: url("/Assets/Photos/exhibitions/evo-bg.png");
+  background-image: url("/Assets/Photos/exhibitions/Compressed/evo-bg-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -607,7 +619,7 @@ footer {
 }
 
 .exhibition-ecology {
-  background-image: url("/Assets/Photos/exhibitions/eco-bg.png");
+  background-image: url("/Assets/Photos/exhibitions/Compressed/eco-bg-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -619,7 +631,7 @@ footer {
 }
 
 .exhibition-ai {
-  background-image: url("/Assets/Photos/exhibitions/ai-bg.png");
+  background-image: url("/Assets/Photos/exhibitions/Compressed/ai-bg-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -631,7 +643,7 @@ footer {
 }
 
 .exhibition-biology {
-  background-image: url("/Assets/Photos/exhibitions/bio-bg.png");
+  background-image: url("/Assets/Photos/exhibitions/Compressed/bio-bg-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -725,12 +737,13 @@ footer {
   justify-content: center;
 }
 
-#people {
-  margin: 5em auto 0em auto;
-  height: 150px;
-}
+
 
 /* Get involved */
+
+.get-involved p{
+  font-size: var(--font-size-l);
+}
 .get-involved-part-1 {
   position: relative;
   display: flex;
@@ -779,6 +792,30 @@ footer {
   max-width: 25em;
 }
 
+.get-involved-part-2 img{
+  padding-bottom: 2em;
+}
+
+.get-involved-part-3 {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.text-content-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  max-width: 25em;
+}
+
+.get-involved-part-3 img{
+  padding-bottom: 2em;
+}
+
 /* Adjustments for smaller screens */
 @media (max-width: 1200px) {
   .get-involved-part-2 {
@@ -796,12 +833,28 @@ footer {
     gap: 1em;
     max-width: 32em;
   }
+
+    .get-involved-part-3 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .text-content-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    max-width: 32em;
+  }
 }
 
 /* Adjustments for smaller screens */
 @media (max-width: 1000px) {
   .get-involved-part-1 {
-    padding-bottom: 5em;
+    padding-bottom: 3em;
   }
 
   .text-content-1 {
@@ -1175,6 +1228,34 @@ footer {
     height: 12rem;
   }
 
+  .header__exhibitions {
+    padding-top: 0em;
+  }
+
+  .header__exhibitions .content__section-header {
+    margin-top: 0em;
+  }
+
+body .header-nav-exhibitions {
+  position: relative; 
+  width: 100%; /* Ensures it spans the full width */
+  top: 0; /* Aligns to the top of the viewport initially */
+}
+
+#cosmology img {
+  width: 80%;
+  margin: auto;
+}
+
+.exhibition-item {
+    padding-top: 0%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+  padding-bottom: 0em;
+}
+
+
   #hero-img {
     margin-top: 7rem;
   }
@@ -1228,16 +1309,11 @@ footer {
   }
 
   header {
-    padding-bottom: 0%;
+    padding-bottom: 0;
   }
 }
 
-@media only screen and (max-width: 900px) and (-webkit-min-device-pixel-ratio: 2), 
-       only screen and (max-width: 900px) and (min-resolution: 2dppx) {
-  .navbar__content {
-    padding: 17.2px 0 0 0;
-  }
-}
+
 
 
 
