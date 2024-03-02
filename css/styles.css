@@ -2,8 +2,6 @@
 @import url(variables.css);
 @import url(utilities.css);
 
-
-
 /* Buttons */
 /* Styling for buttons. */
 .button {
@@ -44,7 +42,6 @@
 footer {
   display: flex;
   flex-direction: column;
-  scroll-snap-align: none;
 }
 
 #footer-logo {
@@ -77,13 +74,14 @@ footer {
 .opening-hours-background {
   display: flex;
   flex-direction: row;
-  min-width: 300px; 
+  min-width: 300px;
   max-width: 50px;
   gap: 4em;
-  padding: 5em 55em 10em 5em;
-  z-index: 0;
+    z-index: 0;
   position: relative;
-  margin-right: -20%;
+  padding: 5em 45em 5em 5em; /* Hypothetical starting right padding */
+  margin-right: -20%; /* Starting margin */
+
 }
 
 .opening-hours {
@@ -95,25 +93,25 @@ footer {
   display: flex;
   gap: 1em;
   justify-content: space-between;
-  border-bottom: 1px solid var(--primary-2); 
-  padding: 1em 0; 
+  border-bottom: 1px solid var(--primary-2);
+  padding: 1em 0;
 }
 
 .day,
 .time {
-  flex: 1; 
-  white-space: nowrap; 
+  flex: 1;
+  white-space: nowrap;
 }
 .day {
-  min-width: 12em; 
+  min-width: 12em;
 }
 
 .time {
-  text-align: right; 
+  text-align: right;
 }
 
 .special-note .time {
-  text-align: left; 
+  text-align: left;
 }
 
 .footer-map {
@@ -158,7 +156,7 @@ footer {
   border-style: solid;
   border-color: var(--background);
   padding: 0.2em 2em 0.2em 0.5em;
-  flex: 1 1 calc(25% - 3em); /* Adjust the flex-basis here */
+  flex: 1 1 calc(25% - 3em); 
   align-content: space-between;
   justify-content: space-between;
 }
@@ -465,7 +463,7 @@ ul {
 
 .contact-card-form,
 .map-container {
-  flex: 1 1 50%; 
+  flex: 1 1 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -531,7 +529,7 @@ textarea {
   width: 100%;
   font-size: var(--font-size-l);
   word-break: break-all;
-  caret-color: #e60073;
+  caret-color: var(--accent);
   resize: none;
 }
 
@@ -546,30 +544,41 @@ textarea {
 
 .header__exhibitions,
 .header-nav-exhibitions,
-.exhibition-item {
+.exhibition-item,
+footer,
+.footer-filler {
   scroll-snap-align: start;
+}
+
+.footer-exhibitions {
+  height: auto;
+  display: flex;
+}
+
+.footer-exhibitions .footer-nav {
+  padding: 2em 0 2em 0;
+}
+
+#exhibitions-footer-logo img {
+  padding-top: 5em;
+  margin: auto;
+  max-width: 300px;
 }
 
 .exhibition-item {
   max-width: 30em;
-  height: fit-content;
   margin: auto;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-l);
   height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   justify-content: space-evenly;
-  padding-top: 5em;
-  padding-bottom: auto;
-  padding-bottom: 1em;
 }
 
 .exhibition-item > * {
-  padding: 0em 3em 0em 3em;
-}
-
-.exhibition-item:last-child {
-  padding-bottom: 100px; /* Adjust based on the footer's height */
+  padding: 4vh 3vh 1vh 3vh;
 }
 
 .exhibition-cosmology {
@@ -646,22 +655,6 @@ textarea {
   line-height: 3.5em;
 }
 
-@media (max-width: 1100px) {
-  .contact-card-form,
-  .map-container {
-    flex-basis: 100%;
-    min-height: 300px;
-  }
-
-  .contact-card-form label {
-    padding: 0;
-  }
-
-  .contact-card-form input[type="submit"] {
-    width: 60%;
-  }
-}
-
 .info-card-section {
   text-align: center;
   font-family: var(--font-noto-sans);
@@ -677,9 +670,9 @@ textarea {
 }
 
 .info-card {
-  flex: 1 1 auto; 
-  min-width: 0; 
-  width: calc(100% / 3); 
+  flex: 1 1 auto;
+  min-width: 0;
+  width: calc(100% / 3);
   max-width: 35em;
   min-width: 28em;
 }
@@ -826,87 +819,6 @@ textarea {
 /* Media Queries */
 /* Responsive design adjustments for different screen sizes, including mobile, tablet, and desktop views. */
 
-/* Adjustments for smaller screens */
-@media (max-width: 1200px) {
-  .get-involved-part-2 {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 2em;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .get-involved-2-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1em;
-    max-width: 32em;
-  }
-
-  .get-involved-part-3 {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 2em;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .text-content-3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1em;
-    max-width: 32em;
-  }
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 1000px) {
-  .get-involved-part-1 {
-    padding-bottom: 3em;
-  }
-
-  .text-content-1 {
-    position: absolute;
-    top: -5%;
-    left: 0;
-    width: 100%;
-    padding: 0px;
-  }
-
-  .image-content-1 {
-    width: 100%;
-  }
-
-  .get-involved-2-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1em;
-    max-width: 90%;
-  }
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 600px) {
-  .text-content-1 {
-    position: absolute;
-    top: -10%;
-    left: 0;
-    max-width: 60%;
-    padding: 0.5em;
-  }
-
-  .image-content-1 {
-    width: 100%;
-  }
-
-  .get-involved-part-1 {
-    padding-bottom: 4em;
-  }
-}
-
 @media screen and (max-width: 2100px) {
   .opening-hours-background {
     padding: 5em 45em 5em 5em;
@@ -921,14 +833,7 @@ textarea {
   }
 }
 
-@media screen and (max-width: 1700px) {
-  .opening-hours-background {
-    padding: 5em 40em 5em 5em;
-    margin-right: -15%;
-  }
-}
 
-/* Further adjustments for smaller medium screens */
 @media screen and (max-width: 1600px) {
   .opening-hours-background {
     padding: 5em 32em 5em 5em;
@@ -1007,6 +912,63 @@ textarea {
     justify-content: space-between;
   }
 }
+@media (max-width: 1200px) {
+  .get-involved-part-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .get-involved-2-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    max-width: 32em;
+  }
+
+  .get-involved-part-3 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .text-content-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    max-width: 32em;
+  }
+
+  .get-involved-part-1 {
+    padding-bottom: 3em;
+  }
+
+  .text-content-1 {
+    position: absolute;
+    top: -5%;
+    left: 0;
+    width: 100%;
+    padding: 0px;
+  }
+
+  .image-content-1 {
+    width: 100%;
+  }
+
+  .get-involved-2-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    max-width: 90%;
+  }
+}
 
 @media screen and (max-width: 1100px) {
   .header-nav {
@@ -1031,9 +993,21 @@ textarea {
   .group-info-card {
     max-width: 40em;
   }
-}
 
-@media screen and (max-width: 1023px) {
+  .contact-card-form,
+  .map-container {
+    flex-basis: 100%;
+    min-height: 300px;
+  }
+
+  .contact-card-form label {
+    padding: 0;
+  }
+
+  .contact-card-form input[type="submit"] {
+    width: 60%;
+  }
+
   .text-left-m {
     text-align: left;
   }
@@ -1045,10 +1019,9 @@ textarea {
   }
 
   .index-news-element {
-    flex-direction: column; /* Switch all to column layout */
+    flex-direction: column;
   }
 
-  /* Ensure images and text in reversed items still follow the column layout */
   .index-news-element.row-reverse {
     flex-direction: column;
   }
@@ -1062,10 +1035,6 @@ textarea {
     flex-direction: column;
     padding: 5em 0 0em 0;
     gap: 1em;
-  }
-
-  .exhibition-item {
-    font-size: var(--font-size-l);
   }
 
   .index-hero-element p {
@@ -1089,21 +1058,13 @@ textarea {
 
   body .header-nav-exhibitions {
     position: relative;
-    width: 100%; /* Ensures it spans the full width */
-    top: 0; /* Aligns to the top of the viewport initially */
+    width: 100%;
+    top: 0;
   }
 
   #cosmology img {
     width: 80%;
-    margin: auto;
-  }
-
-  .exhibition-item {
-    padding-top: 0%;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 2em;
-    padding-bottom: 0em;
+    margin: 0 auto;
   }
 
   #hero-img {
@@ -1132,11 +1093,10 @@ textarea {
   }
 
   .navbar-links {
-    display: flex; /* Enables flexbox layout */
-    justify-content: space-between; /* Distributes space between items */
-    align-items: center; /* Aligns items vertically in the center */
-    align-self: self-end;
-    width: 100%; /* Ensures the container takes up the full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     margin: auto;
     gap: 0;
     margin-top: auto;
@@ -1171,10 +1131,10 @@ textarea {
   .navbar-links {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Correct place for spacing control */
+    justify-content: space-between;
     margin: auto;
     width: 100%;
-    gap: 0em; /* Correct place for gap */
+    gap: 0em;
   }
 
   .navbar__content-item {
@@ -1187,9 +1147,23 @@ textarea {
   .logo-primary {
     display: none;
   }
-}
 
-@media screen and (max-width: 770px) {
+  .exhibition-item {
+    max-width: 35em;
+    margin: auto;
+    font-size: var(--font-size-base);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding-bottom: 10em;
+    justify-content: space-between;
+  }
+
+  .exhibition-item > * {
+    padding: 2vh 3vh 1vh 3vh;
+  }
+
   .content__section {
     width: 100%;
   }
@@ -1243,14 +1217,6 @@ textarea {
     text-align: right;
   }
 
-  .exhibition-item {
-    font-size: var(--font-size-xl);
-  }
-
-  .exhibition-item > * {
-    padding: 0em 2em 0em 2em;
-  }
-
   .legal li {
     background-size: 5%;
     padding-left: 5em;
@@ -1281,9 +1247,7 @@ textarea {
     padding: 0;
     font-size: var(--font-size-xs);
   }
-}
 
-@media screen and (max-width: 500px) {
   .exhibition-gallery-wrapper {
     gap: 0em;
     padding: 3em 0em 0em 0em;
@@ -1303,9 +1267,7 @@ textarea {
     line-height: 5rem;
     width: fit-content;
   }
-}
 
-@media screen and (max-width: 400px) {
   .content__section {
     width: 100%;
   }
@@ -1335,12 +1297,20 @@ textarea {
     max-width: 100%;
   }
 
-  .exhibition-item {
-    font-size: var(--font-size-l);
+  .text-content-1 {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    max-width: 60%;
+    padding: 0.5em;
   }
 
-  .exhibition-item > * {
-    padding: 0em 1em 0em 1em;
+  .image-content-1 {
+    width: 100%;
+  }
+
+  .get-involved-part-1 {
+    padding-bottom: 4em;
   }
 }
 
