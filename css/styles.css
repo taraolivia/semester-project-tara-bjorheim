@@ -423,7 +423,7 @@ ul {
 
 .index-practical-info-list li {
   list-style-type: none;
-background-image: url('/Assets/Photos/bullet-points/Planet.png');
+background-image: url('../Assets/Photos/bullet-points/Planet.png');
   background-repeat: no-repeat;
   background-position-y: center;
   padding-left: 7rem;
@@ -582,7 +582,7 @@ footer,
 }
 
 .exhibition-cosmology {
-  background-image: url("/Assets/Photos/exhibitions/Compressed/cos-bg-min.jpg");
+  background-image: url("../Assets/Photos/exhibitions/Compressed/cos-bg-min.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -594,7 +594,7 @@ footer,
 }
 
 .exhibition-evolution {
-  background-image: url("/Assets/Photos/exhibitions/Compressed/evo-bg-min.png");
+  background-image: url("../Assets/Photos/exhibitions/Compressed/evo-bg-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -606,7 +606,7 @@ footer,
 }
 
 .exhibition-ecology {
-  background-image: url("/Assets/Photos/exhibitions/Compressed/eco-bg-min.png");
+  background-image: url("../Assets/Photos/exhibitions/Compressed/eco-bg-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -618,7 +618,7 @@ footer,
 }
 
 .exhibition-ai {
-  background-image: url("/Assets/Photos/exhibitions/Compressed/ai-bg-min.png");
+  background-image: url("../Assets/Photos/exhibitions/Compressed/ai-bg-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -630,7 +630,7 @@ footer,
 }
 
 .exhibition-biology {
-  background-image: url("/Assets/Photos/exhibitions/Compressed/bio-bg-min.png");
+  background-image: url("../Assets/Photos/exhibitions/Compressed/bio-bg-min.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -645,7 +645,7 @@ footer,
 /*Styling for this specific page */
 .legal li {
   list-style-type: none;
-  background-image: url(/Assets/Photos/bullet-points/Planet.png);
+  background-image: url(../Assets/Photos/bullet-points/Planet.png);
   background-repeat: no-repeat;
   background-position-y: center;
   background-size: auto;
@@ -1235,7 +1235,7 @@ footer,
 
   .index-practical-info-list li {
     list-style-type: none;
-    background-image: url(/Assets/Photos/bullet-points/Planet.png);
+    background-image: url(../Assets/Photos/bullet-points/Planet.png);
     background-repeat: no-repeat;
     background-position-y: center;
     list-style-position: inside;
