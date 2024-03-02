@@ -5,20 +5,20 @@
 /* Buttons */
 /* Styling for buttons. */
 .button {
-  min-height: 7rem;
-  max-width: 30em;
-  width: 60%;
-  padding: 1rem 5rem;
-  text-wrap: wrap;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-size: var(--font-size-xl);
   font-family: var(--font-play);
+  font-size: var(--font-size-xl);
+  justify-content: center;
   margin: 2em auto 1em auto;
+  max-width: 30em;
+  min-height: 7rem;
+  padding: 1rem 5rem;
+  text-align: center;
   text-transform: uppercase;
+  text-wrap: wrap;
+  width: 60%;
 }
 
 .button:hover {
@@ -45,43 +45,42 @@ footer {
 }
 
 #footer-logo {
-  position: absolute;
-  margin: -4.8em auto 5em auto;
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  margin: -4.8em auto 5em auto;
   padding-top: 2em;
+  position: absolute;
+  width: 100%;
 }
 
 .footer-nav {
   display: flex;
   justify-content: space-evenly;
-  padding: 5em 0 1em 0;
-  max-width: 1800px;
   margin: auto;
+  max-width: 1800px;
+  padding: 5em 0 1em 0;
 }
 
 .footer-hours-and-map {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  width: 80%;
+  justify-content: center;
   margin: auto;
+  width: 80%;
 }
 
 .opening-hours-background {
   display: flex;
   flex-direction: row;
-  min-width: 300px;
-  max-width: 50px;
   gap: 4em;
-    z-index: 0;
+  margin-right: -20%;
+  max-width: 50px;
+  min-width: 300px;
+  padding: 5em 45em 5em 5em; 
   position: relative;
-  padding: 5em 45em 5em 5em; /* Hypothetical starting right padding */
-  margin-right: -20%; /* Starting margin */
-
+  z-index: 0;
 }
 
 .opening-hours {
@@ -90,10 +89,10 @@ footer {
 }
 
 .opening-hour {
+  border-bottom: 1px solid var(--primary-2);
   display: flex;
   gap: 1em;
   justify-content: space-between;
-  border-bottom: 1px solid var(--primary-2);
   padding: 1em 0;
 }
 
@@ -122,43 +121,43 @@ footer {
 }
 
 .footer-map-container {
+  height: 0;
+  padding-top: 60%;
   position: relative;
   width: 100%;
-  padding-top: 60%;
-  height: 0;
   z-index: 1;
 }
 
 .footer-map-container iframe {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
   height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
 }
 
 .contact-info-wrapper {
   display: flex;
-  justify-content: space-between;
-  margin: auto;
-  line-height: 3em;
   gap: 1em;
+  justify-content: space-between;
+  line-height: 3em;
+  margin: auto;
   max-width: 1100px;
   padding: 0em 0em 1em 0em;
 }
 
 .contact-info-element {
-  display: flex;
-  gap: 1em;
-  background: var(--secondary-3);
-  border-radius: 15px;
-  border: 2px;
-  border-style: solid;
-  border-color: var(--background);
-  padding: 0.2em 2em 0.2em 0.5em;
-  flex: 1 1 calc(25% - 3em); 
   align-content: space-between;
+  background: var(--secondary-3);
+  border-color: var(--background);
+  border-radius: 15px;
+  border-style: solid;
+  border: 2px;
+  display: flex;
+  flex: 1 1 calc(25% - 3em);
+  gap: 1em;
   justify-content: space-between;
+  padding: 0.2em 2em 0.2em 0.5em;
 }
 
 .contact-info-element img {
@@ -169,19 +168,19 @@ footer {
 /* Reusable UI components such as cards, modals, alerts, and tabs. */
 
 .content__section {
-  width: 80%;
   margin: auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
   max-width: 1800px;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  width: 80%;
 }
 
 .content__section-90 {
-  width: 90%;
   margin: auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
   max-width: 1800px;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  width: 90%;
 }
 
 /* Header and Navigation */
@@ -219,10 +218,10 @@ header {
 
 .navbar__content-item {
   background-color: var(--secondary-2);
-  min-height: 7rem;
-  white-space: normal;
-  padding: 0em 1em;
   line-height: 7rem;
+  min-height: 7rem;
+  padding: 0em 1em;
+  white-space: normal;
   width: 10em;
 }
 
@@ -233,16 +232,16 @@ header {
 }
 
 .logo-primary {
-  padding-top: 10px; /* Lower the logo */
-  width: 80%; /* Adjust based on your logo size */
-  height: auto; /* Maintain aspect ratio */
+  padding-top: 10px; 
+  width: 80%; 
+  height: auto; 
 }
 
 .navbar-smaller {
   padding: 0%;
 }
 
-/* Hide the second logo on larger screens if not needed */
+/* Hide the second logo on larger screens */
 .logo-secondary {
   display: none;
 }
@@ -255,26 +254,26 @@ header {
 }
 
 .index-hero {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 0 auto;
   max-width: 1200px;
   padding-bottom: 2em;
 }
 
 .index-hero-element {
-  display: flex;
-  width: 100%;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .text-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
   padding: 0em;
 }
 
@@ -284,31 +283,31 @@ header {
 }
 
 .index-hero-element img {
-  width: 50%;
-  object-fit: cover;
   flex: 1;
+  object-fit: cover;
+  width: 50%;
 }
 
 .index-news {
+  align-items: stretch;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
   flex-wrap: wrap;
-  max-width: 1400px;
   margin: auto;
+  max-width: 1400px;
 }
 
 .index-news-element {
+  align-items: stretch;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
   margin-top: 5rem;
 }
 
 .index-news-element-text {
-  flex: 1;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .index-news-element-text h3 {
@@ -316,39 +315,39 @@ header {
 }
 
 .index-news-element-text p {
-  padding: 2.5rem;
   height: 100%;
+  padding: 2.5rem;
 }
 
 .index-news-element-img {
   flex: 1;
-  width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .exhibition-gallery-wrapper {
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
   gap: 4em;
   justify-content: center;
   padding: 3em 0;
   text-align: center;
+  width: 100%;
 }
 
 .exhibition-gallery-element {
-  font-family: var(--font-play);
-  font-size: var(--font-size-xxl);
   display: flex;
   flex-direction: column;
+  font-family: var(--font-play);
+  font-size: var(--font-size-xxl);
   max-width: 500px;
 }
 
 .exhibition-gallery-element-name {
   background-color: var(--secondary-dark);
+  border: 5px solid transparent;
   color: var(--white);
   padding: 0.7em 0em;
-  border: 5px solid transparent;
 }
 
 .exhibition-gallery-element-name:hover {
@@ -413,8 +412,8 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 2fr;
-  max-width: 600px;
   margin: 3em auto;
+  max-width: 600px;
 }
 
 ul {
@@ -422,31 +421,31 @@ ul {
 }
 
 .index-practical-info-list li {
-  list-style-type: none;
-background-image: url('../Assets/Photos/bullet-points/Planet.png');
-  background-repeat: no-repeat;
+  background-image: url("../Assets/Photos/bullet-points/Planet.png");
   background-position-y: center;
-  padding-left: 7rem;
-  list-style-position: inside;
+  background-repeat: no-repeat;
   line-height: 7rem;
+  list-style-position: inside;
+  list-style-type: none;
+  padding-left: 7rem;
 }
 
 .index-practical-info-list-part {
+  align-content: center;
   align-items: center;
+  align-self: center;
   justify-content: center;
   justify-self: center;
-  align-self: center;
-  align-content: center;
 }
 
 /* PRACTICAL INFO */
 /*Styling for this specific page */
 
 .contact-card {
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 20px;
   box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1250px;
+  padding: 20px;
 }
 
 .contact-card-form {
@@ -454,18 +453,18 @@ background-image: url('../Assets/Photos/bullet-points/Planet.png');
 }
 
 .contact-wrapper {
+  align-items: stretch;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch;
   width: 100%;
 }
 
 .contact-card-form,
 .map-container {
-  flex: 1 1 50%;
   display: flex;
   flex-direction: column;
+  flex: 1 1 50%;
   justify-content: center;
   width: 100%;
 }
@@ -481,65 +480,65 @@ background-image: url('../Assets/Photos/bullet-points/Planet.png');
 .contact-card-form input[type="email"],
 .contact-card-form textarea,
 .contact-card-form input[type="submit"] {
-  width: 100%;
   margin: 10px 0;
   padding: 0.5em;
+  width: 100%;
 }
 
 .contact-card-form input[type="submit"] {
-  margin: auto;
   border: none;
-  width: 100%;
-  padding: 0.5em 0.5em;
   margin: 1em auto 0 auto;
+  margin: auto;
   min-width: fit-content;
+  padding: 0.5em 0.5em;
+  width: 100%;
 }
 
 .map-container {
+  border-radius: 0rem 1rem 1rem 0rem;
+  flex-grow: 1;
+  min-height: 300px;
   position: relative;
   width: 100%;
-  flex-grow: 1;
-  border-radius: 0rem 1rem 1rem 0rem;
-  min-height: 300px;
 }
 
 .map-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   border-radius: 0rem 1rem 1rem 0rem;
   border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .decorative-line--form {
-  height: 2px;
   background: var(--accent);
   color: var(--white);
+  height: 2px;
 }
 
 .form-text-input,
 textarea {
-  padding: 1em;
   background: none;
   border: none;
-  margin-top: 10px;
-  color: var(--text);
-  width: 100%;
-  font-size: var(--font-size-l);
-  word-break: break-all;
   caret-color: var(--accent);
+  color: var(--text);
+  font-size: var(--font-size-l);
+  margin-top: 10px;
+  padding: 1em;
   resize: none;
+  width: 100%;
+  word-break: break-all;
 }
 
 /* EXHIBITIONS */
 /*Styling for this specific page */
 .scroll-container {
-  scroll-snap-type: y mandatory;
   height: 100vh;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 .header__exhibitions,
@@ -560,21 +559,21 @@ footer,
 }
 
 #exhibitions-footer-logo img {
-  padding-top: 5em;
   margin: auto;
   max-width: 300px;
+  padding-top: 5em;
 }
 
 .exhibition-item {
-  max-width: 30em;
-  margin: auto;
-  font-size: var(--font-size-l);
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  font-size: var(--font-size-l);
+  height: 100vh;
   justify-content: space-evenly;
+  margin: auto;
+  max-width: 30em;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
 }
 
 .exhibition-item > * {
@@ -644,68 +643,68 @@ footer,
 /* DOCUMENTS */
 /*Styling for this specific page */
 .legal li {
-  list-style-type: none;
   background-image: url(../Assets/Photos/bullet-points/Planet.png);
-  background-repeat: no-repeat;
   background-position-y: center;
+  background-repeat: no-repeat;
   background-size: auto;
-  padding-left: 4em;
-  margin-left: 1em;
-  list-style-position: inside;
   line-height: 3.5em;
+  list-style-position: inside;
+  list-style-type: none;
+  margin-left: 1em;
+  padding-left: 4em;
 }
 
 .info-card-section {
-  text-align: center;
-  font-family: var(--font-noto-sans);
+  align-content: center;
+  align-items: center;
+  align-items: stretch;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  font-family: var(--font-noto-sans);
   gap: 5em;
-  align-items: stretch;
+  justify-content: center;
   padding-bottom: 3em;
+  text-align: center;
 }
 
 .info-card {
   flex: 1 1 auto;
-  min-width: 0;
-  width: calc(100% / 3);
   max-width: 35em;
+  min-width: 0;
   min-width: 28em;
+  width: calc(100% / 3);
 }
 
 .info-card > * {
   padding: 1em 2em 1em 2em;
 }
 .info-card-title {
-  font-size: var(--font-size-base);
   border-radius: 0.8rem 0.8rem 0rem 0rem;
+  font-size: var(--font-size-base);
   padding: 0em 2em 0.8em 2em;
 }
 
 .info-card-text {
-  font-size: var(--font-size-base);
   border-radius: 0rem 0rem 0.8rem 0.8rem;
-  padding: 1em 3em 1em 3em;
-  min-height: 20em;
-  justify-content: space-evenly;
   display: flex;
   flex-direction: column;
+  font-size: var(--font-size-base);
+  justify-content: space-evenly;
+  min-height: 20em;
+  padding: 1em 3em 1em 3em;
 }
 
 .group-info-wrapper {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  white-space: pre-line;
+  flex-wrap: wrap;
   gap: 5em;
   justify-content: center;
-  max-width: 1600px;
   margin: auto;
+  max-width: 1600px;
   padding-bottom: 5em;
+  white-space: pre-line;
 }
 
 .group-info-card {
@@ -745,30 +744,30 @@ footer,
   font-size: var(--font-size-l);
 }
 .get-involved-part-1 {
-  position: relative;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
   font-size: var(--font-size-l);
+  justify-content: center;
+  position: relative;
 }
 
 .text-content-1 {
+  background-color: var(--background);
+  left: 0;
+  max-width: 50%;
+  padding: 0em 1em 1em 1em;
   position: absolute;
   top: 0;
-  left: 0;
-  background-color: var(--background);
-  padding: 0em 1em 1em 1em;
-  max-width: 50%;
   z-index: 2;
 }
 
 .image-content-1 {
-  width: 80%;
+  align-items: flex-end;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
-  margin-right: 0;
   margin-left: auto;
+  margin-right: 0;
+  width: 80%;
 }
 
 .image-content img {
@@ -779,16 +778,16 @@ footer,
 .get-involved-part-2 {
   display: flex;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
   gap: 2em;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .get-involved-2-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 1em;
+  justify-content: center;
   max-width: 25em;
 }
 
@@ -799,16 +798,16 @@ footer,
 .get-involved-part-3 {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 2em;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .text-content-3 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 1em;
+  justify-content: center;
   max-width: 25em;
 }
 
@@ -833,7 +832,6 @@ footer,
   }
 }
 
-
 @media screen and (max-width: 1600px) {
   .opening-hours-background {
     padding: 5em 32em 5em 5em;
@@ -843,20 +841,20 @@ footer,
 
 @media screen and (max-width: 1350px) {
   .opening-hours-background {
+    gap: 2em;
     justify-content: center;
-    padding: 1em;
     margin-right: 0;
     max-width: none;
-    gap: 2em;
+    padding: 1em;
   }
 
   .footer-hours-and-map {
-    display: flex;
-    justify-content: center;
     background-color: var(--secondary-2);
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
     margin: auto;
+    width: 100%;
   }
 
   .footer-hours-and-map h3 {
@@ -864,19 +862,19 @@ footer,
   }
 
   .footer-map-container {
-    width: 100%;
-    padding-top: 0;
     height: auto;
     margin: 0 auto;
     padding-bottom: 5em;
+    padding-top: 0;
+    width: 100%;
   }
 
   .footer-map-container iframe {
-    width: 100%;
-    height: auto;
-    min-height: 300px;
-    max-height: 400px;
     border: 0;
+    height: auto;
+    max-height: 400px;
+    min-height: 300px;
+    width: 100%;
   }
 
   .footer-map {
@@ -896,8 +894,8 @@ footer,
   .day,
   .time {
     flex: 1;
-    white-space: nowrap;
     max-width: 100%;
+    white-space: nowrap;
   }
 
   .contact-info-wrapper {
@@ -916,32 +914,32 @@ footer,
   .get-involved-part-2 {
     display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
     gap: 2em;
     justify-content: center;
-    flex-wrap: wrap;
   }
 
   .get-involved-2-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 1em;
+    justify-content: center;
     max-width: 32em;
   }
 
   .get-involved-part-3 {
     display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
     gap: 2em;
     justify-content: center;
-    flex-wrap: wrap;
   }
 
   .text-content-3 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 1em;
+    justify-content: center;
     max-width: 32em;
   }
 
@@ -950,11 +948,11 @@ footer,
   }
 
   .text-content-1 {
+    left: 0;
+    padding: 0px;
     position: absolute;
     top: -5%;
-    left: 0;
     width: 100%;
-    padding: 0px;
   }
 
   .image-content-1 {
@@ -964,8 +962,8 @@ footer,
   .get-involved-2-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 1em;
+    justify-content: center;
     max-width: 90%;
   }
 }
@@ -980,10 +978,10 @@ footer,
   }
 
   .navbar__content-item {
-    width: 10em;
+    line-height: 6rem;
     max-height: 6rem;
     min-height: 6rem;
-    line-height: 6rem;
+    width: 10em;
   }
 
   .logo-primary {
@@ -1033,8 +1031,8 @@ footer,
   .footer-nav {
     display: flex;
     flex-direction: column;
-    padding: 5em 0 0em 0;
     gap: 1em;
+    padding: 5em 0 0em 0;
   }
 
   .index-hero-element p {
@@ -1058,8 +1056,8 @@ footer,
 
   body .header-nav-exhibitions {
     position: relative;
-    width: 100%;
     top: 0;
+    width: 100%;
   }
 
   #cosmology img {
@@ -1076,30 +1074,30 @@ footer,
   }
 
   .navbar__content {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: space-between;
-    align-items: center;
     margin: auto;
     max-width: 100%;
     padding: 1px 0 0 0;
-    height: 100%;
   }
 
   .navbar__content-item {
+    line-height: 5rem;
     max-height: 5rem;
     min-height: 5rem;
-    line-height: 5rem;
   }
 
   .navbar-links {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin: auto;
+    display: flex;
     gap: 0;
+    justify-content: space-between;
     margin-top: auto;
+    margin: auto;
+    width: 100%;
   }
 
   .logo-primary {
@@ -1108,9 +1106,9 @@ footer,
 
   .logo-secondary {
     display: block;
+    height: 100%;
     margin: auto;
     padding: 1em 0em;
-    height: 100%;
     width: auto;
   }
 
@@ -1129,18 +1127,18 @@ footer,
   }
 
   .navbar-links {
-    display: flex;
     align-items: center;
+    display: flex;
+    gap: 0em;
     justify-content: space-between;
     margin: auto;
     width: 100%;
-    gap: 0em;
   }
 
   .navbar__content-item {
+    line-height: 5rem;
     max-height: 5rem;
     min-height: 5rem;
-    line-height: 5rem;
     width: 11em;
   }
 
@@ -1149,15 +1147,15 @@ footer,
   }
 
   .exhibition-item {
-    max-width: 35em;
-    margin: auto;
-    font-size: var(--font-size-base);
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 1em;
-    padding-bottom: 10em;
+    font-size: var(--font-size-base);
+    height: 100vh;
     justify-content: space-between;
+    margin: auto;
+    max-width: 35em;
+    padding-bottom: 10em;
+    padding-top: 1em;
   }
 
   .exhibition-item > * {
@@ -1195,16 +1193,16 @@ footer,
   .footer-nav {
     display: flex;
     flex-direction: column;
-    padding: 7em 0 1em 0;
     gap: 1em;
+    padding: 7em 0 1em 0;
   }
 
   .footer-map-container {
-    width: 100%;
-    padding-top: 0;
     height: auto;
     margin: 0 auto;
     padding-bottom: 12em;
+    padding-top: 0;
+    width: 100%;
   }
 
   .text-left-s {
@@ -1234,12 +1232,12 @@ footer,
   }
 
   .index-practical-info-list li {
-    list-style-type: none;
     background-image: url(../Assets/Photos/bullet-points/Planet.png);
-    background-repeat: no-repeat;
     background-position-y: center;
-    list-style-position: inside;
+    background-repeat: no-repeat;
     line-height: 4em;
+    list-style-position: inside;
+    list-style-type: none;
     padding-left: 10rem;
   }
 
@@ -1262,9 +1260,9 @@ footer,
   }
 
   .navbar__content-item {
+    line-height: 5rem;
     max-height: 5rem;
     min-height: 5rem;
-    line-height: 5rem;
     width: fit-content;
   }
 
@@ -1279,8 +1277,8 @@ footer,
   .footer-nav {
     display: flex;
     flex-direction: column;
-    padding: 6em 0 1em 0;
     gap: 1em;
+    padding: 6em 0 1em 0;
   }
 
   .text-left-s {
@@ -1298,11 +1296,11 @@ footer,
   }
 
   .text-content-1 {
-    position: absolute;
-    top: -10%;
     left: 0;
     max-width: 60%;
     padding: 0.5em;
+    position: absolute;
+    top: -10%;
   }
 
   .image-content-1 {
@@ -1313,5 +1311,3 @@ footer,
     padding-bottom: 4em;
   }
 }
-
-

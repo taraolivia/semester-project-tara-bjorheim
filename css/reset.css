@@ -22,12 +22,12 @@ html {
 }
 
 body {
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
   font-family: var(--font-primary);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
   text-align: left;
 }
 
@@ -92,7 +92,7 @@ a:visited {
 [aria-current="page"] a:hover,
 [aria-current="page"] a:focus,
 [aria-current="page"] p {
+  cursor: default;
   font-weight: bold;
   text-decoration: none;
-  cursor: default;
 }
