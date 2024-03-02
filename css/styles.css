@@ -423,7 +423,7 @@ ul {
 
 .index-practical-info-list li {
   list-style-type: none;
-  background-image: url(/Assets/Photos/bullet-points/Planet.png);
+  background-image: url(Assets/Photos/bullet-points/Planet.png);
   background-repeat: no-repeat;
   background-position-y: center;
   padding-left: 7rem;
