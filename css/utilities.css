@@ -1,0 +1,165 @@
+/* Utilities */
+/* Utility classes for margin, padding, text alignment, display, and visibility. */
+
+/* Typography */
+/* Font Family */
+.ff-noto-sans {
+  font-family: var(--font-noto-sans);
+}
+.ff-play {
+  font-family: var(--font-play);
+  font-weight: var(--font-weight-normal);
+}
+.ff-revalia {
+  font-family: var(--font-revalia);
+}
+
+/* Font Weight */
+.fw-normal {
+  font-weight: var(--font-weight-normal);
+}
+.fw-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Font Size */
+.fs-xs {
+  font-size: var(--font-size-xs);
+}
+.fs-s {
+  font-size: var(--font-size-s);
+}
+.fs-base {
+  font-size: var(--font-size-base);
+}
+.fs-l {
+  font-size: var(--font-size-l);
+}
+.fs-xl {
+  font-size: var(--font-size-xl);
+}
+.fs-xxl {
+  font-size: var(--font-size-xxl);
+}
+
+/* Text-alignment */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.row-reverse {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+/* Colours */
+/* Primary Colors */
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-primary-2 {
+  background-color: var(--primary-2);
+}
+div .bg-primary-3,
+.bg-primary-3 {
+  background-color: var(--primary-3);
+}
+.bg-primary-4 {
+  background-color: var(--primary-4);
+}
+
+/* Secondary Colors */
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.bg-secondary-2 {
+  background-color: var(--secondary-2);
+}
+.bg-secondary-3 {
+  background-color: var(--secondary-3);
+}
+.bg-secondary-4 {
+  background-color: var(--secondary-4);
+}
+
+.bg-secondary-dark {
+  background-color: var(--secondary-dark);
+}
+
+/* Accent Colors */
+.bg-accent {
+  background-color: var(--accent);
+}
+.bg-accent-darker {
+  background-color: var(--accent-darker);
+}
+.bg-accent-darkest {
+  background-color: var(--accent-darkest);
+}
+
+/* Background */
+div .bg-background,
+.bg-background {
+  background-color: var(--background);
+}
+.bg-background-darker {
+  background-color: var(--background-darker);
+}
+
+div .bg-hero,
+.bg-hero {
+  background-color: var(--hero-page);
+}
+
+/* Additional Colors */
+.bg-white {
+  background-color: var(--white);
+}
+.bg-silver {
+  background-color: var(--silver);
+}
+.bg-yellow {
+  background-color: var(--yellow);
+}
+.bg-text {
+  background-color: var(--text);
+}
+
+.clr-white {
+  color: var(--white);
+}
+
+.center {
+  margin: auto;
+}
+
+.padding-top-bottom-1em {
+  padding: 1em 0;
+}
+
+.padding-top-bottom-2em {
+  padding: 2em 0;
+}
+
+.padding-bottom-1em {
+  padding-bottom: 1em;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.pre-line {
+  white-space: pre-line;
+  max-width: 65em;
+}

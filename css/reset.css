@@ -1,3 +1,6 @@
+/* Reset Styles */
+/* CSS reset or normalization styles to ensure consistency across different browsers. */
+
 *,
 *::before,
 *::after {
@@ -8,10 +11,24 @@
   margin: 0;
 }
 
+html {
+  font-size: 62.5%; /* Sets the base size to 10px, making 1rem = 10px */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 43.75%; /* Scales down so 1rem = 7px, making the calculation basis smaller */
+  }
+}
+
 body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  text-align: left;
 }
 
 img,
@@ -41,6 +58,22 @@ h6 {
   font-weight: var(--font-weight-normal);
 }
 
+.content__section > p,
+.content__section > h1,
+.content__section > h2,
+.content__section > h3,
+.content__section > h4,
+.content__section > li,
+.content__section > ul {
+  max-width: 90%;
+  margin: auto;
+}
+
+p {
+  max-width: 60em;
+}
+
+/* Link styling */
 a,
 a:visited {
   color: inherit;
@@ -50,9 +83,9 @@ a:visited {
 /* Underline on hover/focus for accessibility */
 .navbar__content a:hover,
 .navbar__content a:focus {
-    text-decoration: underline;
-    text-decoration-color: var(--primary);
-  }
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+}
 
 /* Styling for the active link */
 [aria-current="page"] a,
@@ -63,7 +96,3 @@ a:visited {
   text-decoration: none;
   cursor: default;
 }
-
-
-
-

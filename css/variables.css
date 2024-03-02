@@ -1,26 +1,28 @@
 :root {
+  /* CSS Variables */
+  /* Definitions for CSS variables used throughout the site, including colors, font sizes, spacing units, etc. */
+
   /* Color styles */
 
-    /* Primary */
+  /* Primary */
   --primary: #b4f034;
   --primary-2: #d8f792;
   --primary-3: #e5fab8;
   --primary-4: #effac1;
 
-
-   /* Secondary */
+  /* Secondary */
   --secondary: #7a76f4;
   --secondary-2: #bab8f9;
   --secondary-3: #d1d0fb;
-  --secondary-4: #E8E7FD;
+  --secondary-4: #e8e7fd;
   --secondary-dark: #080647;
 
-    /* Accent */
+  /* Accent */
   --accent: #f147ea;
   --accent-darker: #a60ca1;
   --accent-darkest: #770973;
 
-    /* Text, background, etc */
+  /* Text, background, etc */
 
   --text: #0f1301;
 
@@ -31,21 +33,18 @@
   --white: #ffffff;
   --yellow: #ffdd00;
 
-
   /* Text styles */
 
-    /* Font Families */
+  /* Font Families */
   --font-noto-sans: "Noto Sans", sans-serif;
   --font-play: "Play", sans-serif;
   --font-revalia: "Revalia", sans-serif;
 
-    /* Font Weights */
+  /* Font Weights */
   --font-weight-normal: 400;
   --font-weight-bold: 700;
 
-
-
-   /* Font Sizes Regular Screen Size. Will be 2 numbers smaller for mobile*/
+  /* Font Sizes Regular Screen Size. Will be 2 numbers smaller for mobile*/
   --font-size-xs: 1.4rem; /* 14px */
   --font-size-s: 1.6rem; /* 16px */
   --font-size-base: 1.8rem; /* 18px */
@@ -55,12 +54,3 @@
 }
 
 
-  html {
-    font-size: 62.5%; /* Sets the base size to 10px, making 1rem = 10px */
-}
-
-  @media (max-width: 768px) {
-    html {
-      font-size: 43.75%; /* Scales down so 1rem = 7px, making the calculation basis smaller */
-    }
-  }
