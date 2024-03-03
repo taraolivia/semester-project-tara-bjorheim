@@ -1092,6 +1092,29 @@ footer,
     padding: 1px 0 0 0;
   }
 
+  /* iPhone X, XS, XS Max, XR, 11 Pro, 11 Pro Max, 11, 12 mini, 12, 12 Pro, 12 Pro Max, 13 mini, 13, 13 Pro, and 13 Pro Max */
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 812px), 
+  (device-width : 812px) 
+  and (device-height : 375px),
+  (device-width : 414px) 
+  and (device-height : 896px), 
+  (device-width : 896px) 
+  and (device-height : 414px),
+  (device-width : 390px) 
+  and (device-height : 844px), 
+  (device-width : 844px) 
+  and (device-height : 390px),
+  (device-width : 428px) 
+  and (device-height : 926px), 
+  (device-width : 926px) 
+  and (device-height : 428px) {
+  .navbar__content {
+    padding: 17.2px 0 0 0;
+  }
+}
+
   .navbar__content-item {
     line-height: 5rem;
     max-height: 5rem;
@@ -1250,8 +1273,8 @@ footer,
   }
 
   .index-hero-element p {
-    padding: 0;
-    font-size: var(--font-size-xs);
+    padding: 0.5em;
+    font-size: var(--font-size-s);
   }
 
   .exhibition-gallery-wrapper {
