@@ -164,6 +164,11 @@ footer {
   height: 3em;
 }
 
+.footer-legal a{
+  text-decoration: underline;
+  text-decoration-color: var(--secondary);
+}
+
 /* Components and sections */
 /* Reusable UI components such as cards, modals, alerts, and tabs. */
 
