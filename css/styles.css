@@ -639,6 +639,12 @@ footer,
   scroll-snap-align: start;
 }
 
+  body .header-nav-exhibitions {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
 .footer-exhibitions {
   height: auto;
   display: flex;
@@ -657,17 +663,18 @@ footer,
 .exhibition-item {
   display: flex;
   flex-direction: column;
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-base);
   height: 100vh;
   justify-content: space-evenly;
+  align-content: center;
   margin: auto;
   max-width: 30em;
-  padding-bottom: 5vh;
+  padding-bottom: 15vh;
   padding-top: 5vh;
 }
 
 .exhibition-item > * {
-  padding: 4vh 3vh 1vh 3vh;
+  padding: 1vh 3vh 1vh 3vh;
 }
 
 .exhibition-cosmology {
@@ -680,6 +687,14 @@ footer,
 .exhibition-item-cosmology {
   background: rgba(8, 6, 71, 0.7);
   color: var(--yellow);
+}
+
+.exhibition-item-cosmology img,
+.exhibition-item-ecology img,
+.exhibition-item-biology img,
+.exhibition-item-evolution img{
+width: 60%;
+margin: auto;
 }
 
 .exhibition-evolution {
@@ -1067,11 +1082,7 @@ footer,
     margin-top: 0em;
   }
 
-  body .header-nav-exhibitions {
-    position: relative;
-    top: 0;
-    width: 100%;
-  }
+
 
   #cosmology img {
     width: 80%;
