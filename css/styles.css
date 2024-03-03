@@ -78,7 +78,7 @@ footer {
   margin-right: -20%;
   max-width: 50px;
   min-width: 300px;
-  padding: 5em 45em 5em 5em; 
+  padding: 5em 45em 5em 5em;
   position: relative;
   z-index: 0;
 }
@@ -232,9 +232,9 @@ header {
 }
 
 .logo-primary {
-  padding-top: 10px; 
-  width: 80%; 
-  height: auto; 
+  padding-top: 10px;
+  width: 80%;
+  height: auto;
 }
 
 .navbar-smaller {
@@ -743,8 +743,6 @@ footer,
   padding-top: 5em;
 }
 
-
-
 /* GET INVOLVED */
 /*Styling for this specific page */
 
@@ -756,7 +754,9 @@ footer,
   display: flex;
   font-size: var(--font-size-l);
   justify-content: center;
+  margin: auto;
   position: relative;
+  max-width: 1500px;
 }
 
 .text-content-1 {
@@ -1090,7 +1090,6 @@ footer,
     margin: auto;
     max-width: 100%;
     padding: 2px 0 0 0;
-
   }
 
   .navbar__content-item {
