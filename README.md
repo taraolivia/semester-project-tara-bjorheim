@@ -1,9 +1,8 @@
 # Galaxy Garden Community Museum 🌌
 
-Welcome to the **Galaxy Garden Community Museum** website project. This site was designed to be a vibrant and engaging digital space for young science enthusiasts and their families. The museum's goal is to spark curiosity and make science accessible to children (7-15 years old) while maintaining a design that appeals to all visitors.
-
 ![galaxy-garden-hero](https://github.com/user-attachments/assets/542f3d2f-ebe3-4c8c-838f-61802ffd76c5)
 
+Welcome to the **Galaxy Garden Community Museum** website project. This site was designed to be a vibrant and engaging digital space for young science enthusiasts and their families. The museum's goal is to spark curiosity and make science accessible to children (7-15 years old) while maintaining a design that appeals to all visitors.
 ## Live Project
 
 You can view the live version of the **Galaxy Garden Community Museum** project [here](https://taraolivia.github.io/semester-project-tara-bjorheim).
